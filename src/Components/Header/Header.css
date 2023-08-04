@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background-image: linear-gradient(to left,var(--verde), var(--verdeC));
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
 }
 .inputSearch{
     width: 17rem;
-    height: 50px;
+    height: 45px;
     border-radius: 30px;
     padding-inline: 10px;
     border: none;

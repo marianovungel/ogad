@@ -14,7 +14,7 @@ export default function Header() {
             <div className="menu">
                 <button className='doar'>Doar</button>
                 <div className="pesquisa">
-                    <input type='text' placeholder='search' className='inputSearch' required />
+                    <input type='text' placeholder='Procurar...' className='inputSearch' required />
                     <div className="iconInput">
                         <i className="fa-solid fa-magnifying-glass iconPosition"></i>
                     </div>

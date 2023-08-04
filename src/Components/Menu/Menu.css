@@ -1,0 +1,62 @@
+.Menu{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+}
+.fullMenu{
+    width: 80%;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoClass{
+    height: 95px;
+}
+.logoImg{
+    display: flex;
+    align-items: center;
+    width: 33%;
+}
+.textTitle{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    font-size: 1.2rem;
+    margin: 0px;
+    font-weight: 500;
+    font-family: 'Caveat', cursive;
+    color: var(--verdeE);
+    /* font-family: 'Satisfy'; */
+}
+.menuEscolha{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.itemMenu{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--verde);
+}
+.selectButton{
+    background-color: var(--verdeE);
+    color: var(--verdeC);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 10px;
+}
