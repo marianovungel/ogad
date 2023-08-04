@@ -1,0 +1,97 @@
+.Header{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(to left,var(--verde), var(--verdeC));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.allcontent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flag{
+    width: 15%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px;
+}
+.flagItem{
+    margin: 2px;
+}
+.itemImg{
+    height: 40px;
+    transform: scale(0.90);
+}
+.itemImg:hover{
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.pesquisa{
+    display: flex;
+    align-items: center;
+}
+.inputSearch{
+    width: 17rem;
+    height: 50px;
+    border-radius: 30px;
+    padding-inline: 10px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #dddddda0;
+    font-weight: 500;
+    color: #666;
+    font-size: 0.8rem;
+}
+.iconPosition{
+    margin-left: -30px;
+    font-size: 1.3rem;
+    color: var(--verdeE);
+    background-color: #fff;
+}
+.iconsSocial{
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconsoc{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.iconsoc:hover{
+    color: var(--verdeE);
+}
+.doar{
+    width: 17%;
+    height: 40px;
+    display: flex;align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
+    background-color: var(--verdeE);
+    box-shadow: 1px 1px 1px 1px #005555a9;
+}
+.doar:hover{
+    background-color: var(--verdeC);
+    box-shadow: 1px 1px 1px 1px var(--verdeC);
+    font-weight: 600;
+    transition: 0.3s;
+}
