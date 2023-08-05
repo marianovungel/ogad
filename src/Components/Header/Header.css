@@ -3,7 +3,9 @@
     padding: 0px;
     width: 100%;
     height: 60px;
-    background-image: linear-gradient(to left,var(--verde), var(--verdeC));
+    /* background-color: #ddd; */
+    /* background-image: linear-gradient(to left,var(--verde), var(--verdeC)); */
+    background-image: linear-gradient(to left,#999, #ddd);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -88,6 +90,7 @@
     border: none;
     background-color: var(--verdeE);
     box-shadow: 1px 1px 1px 1px #005555a9;
+    /* color: #fff; */
 }
 .doar:hover{
     background-color: var(--verdeC);

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Menu.css'
 
-export default function Menu() {
+export default function Menu({select}) {
+  const [selectItem, setSelectItem] = useState(select)
+  useEffect(()=>{
+    setSelectItem(selectItem)
+  }, [selectItem])
   return (
     <div className='Menu'>
       <div className="fullMenu">
@@ -13,11 +17,11 @@ export default function Menu() {
             </div>
         </div>
         <div className="menuEscolha">
-            <div className="itemMenu selectButton">Início</div>
-            <div className="itemMenu">Sobre</div>
-            <div className="itemMenu">Projetos</div>
-            <div className="itemMenu">Atualidade</div>
-            <div className="itemMenu">Contato</div>
+            <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div>
+            <div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div>
+            <div className={selectItem==="3" ? "selectButton": "itemMenu"}>Projetos</div>
+            <div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidade</div>
+            <div className={selectItem==="5" ? "selectButton": "itemMenu"}>Contato</div>
         </div>
       </div>
     </div>

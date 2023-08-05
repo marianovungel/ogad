@@ -48,8 +48,21 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--verde);
+    padding: 7px;
+    cursor: pointer;
+}
+.itemMenu:hover{
+    background-color: var(--verdeE);
+    color: var(--verdeC);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 10px;
 }
 .selectButton{
+    cursor: pointer;
     background-color: var(--verdeE);
     color: var(--verdeC);
     height: 60px;

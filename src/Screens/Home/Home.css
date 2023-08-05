@@ -2,5 +2,207 @@
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+.imagemContent{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backImgContent{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../../../public/droga.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backImgContentBissau{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../../../public/bissau1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colorBack{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: linear-gradient(to right,var(--verde), var(--verdeC)); */
+    /* opacity: 0.0; */
+}
+.colorBackBissau{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left,var(--verde), transparent);
+    /* background-image: linear-gradient(to right,var(--verde), transparent); */
+    /* opacity: 0.0; */
+}
+.ogadText, .textDescOGAD{
+    color: #fff;
+    margin: 0px;
+}
+.ogadText{
+    font-size: 8.7rem;
+}
+.textDescOGAD{
+    font-size: 2.2rem;
+}
+.textBack{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: var(--verde); */
+    width: 80%;
+    border-radius: 50px;
+    padding: 30px;
+}
+.textBackBissau{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: var(--verde); */
+    width: 80%;
+    border-radius: 50px;
+    padding: 30px;
+}
+.leftBissau{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: var(--verde); */
+    width: 35%;
+    border-radius: 50px;
+    padding: 30px;
+}
+.rightBissau{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: var(--verde); */
+    width: 50%;
+    border-radius: 50px;
+    padding: 30px;
+}
+.fulltextIntrudation{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+.textContentIntrodaction{
+    width: 70%;
+    margin: 0px;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textContentIntrodactionFull{
+    width: 70%;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.intudaction{
+    color: var(--verdeE);
+    font-size: 1.6rem;
+}
+.cardObjectivos{
+    width: 300px;
+}
+.imgCardObj{
+    width: 100%;
+}
+.imagemCardObj{
+    width: 100%;
+}
+.imgCardObj{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 2px #999;
+}
+.textCArdObj{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0px;
+}
+.textCArdObj{
+    width: 100%;
+}
+.titleCardObj{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.pCardObj{
+    width: 100%;
+    margin-top: 10px;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.leftButtonBissau{
+    width: 190px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size:1rem;
+    background-color: var(--verdeE);
+    margin-top: 10px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+    border: none;
+    box-shadow: 1px 1px 8px 2px var(--verde);
+    cursor: pointer;
+}
+.leftButtonBissau:hover{
+    box-shadow: 1px 1px 8px 2px #ddd;
+    transition: 0.3s;
+}
+.cicleColor{
+    color: #fff;
+    margin-left: 15px;
+}
+.textBissauLeft{
+    color: #fff;
+    font-size: 1rem;
+}
+.centerBissau{
+    width: 15%;
 }
