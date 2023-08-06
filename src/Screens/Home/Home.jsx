@@ -2,6 +2,8 @@ import React from 'react'
 import './Home.css'
 import Header from '../../Components/Header/Header'
 import Menu from '../../Components/Menu/Menu'
+import SubFooter from '../../Components/SubFooter/SubFooter'
+import Footer from '../../Components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -80,6 +82,29 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="fullHistory">
+        <div className="contentHistory">
+          <div className="imageHistory">
+            <img src="./flag.jfif" alt="" className="imgHistory" />
+          </div>
+          <div className="textHistor">
+            <div className="titleHistory">História de OGAD</div>
+            <div className="textPHistory">
+              O Observatório Guineense sobre Droga e outras Drogas (OGAD),
+              é uma organização de iniciativa privada
+              fundada em 2020, que visa acompanhar e relatar casos de
+              consumo de droga de cidadãos guineenses na Guine-Bissaue 
+              e nas Diásporas Guineense no mundo Todo.
+            </div>
+            <button className="buttonHistory">
+              Sobre OGAD 
+              <i className="fa-solid fa-circle-chevron-right cicleColor"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <SubFooter />
+      <Footer />
     </div>
   )
 }

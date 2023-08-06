@@ -1,0 +1,49 @@
+.SubFooter{
+    width: 100%;
+    padding: 40px 0px;
+    display: flex;align-items: center;
+    justify-content: center;
+    background-color: var(--verdeC);
+}
+.subFooterContent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.imageSubFooter{
+    width: 20%;
+}
+.imgSubFooter{
+    height: 280px;
+    border-radius: 50%;
+}
+.allSubFooter{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.quem{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.quemTitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.itemQuem{
+    font-weight: 500;
+    cursor: pointer;
+}
+.itemQuem:hover{
+    /* font-weight: 600; */
+    color: #f0fbf9;
+    transition: 0.3s;
+}

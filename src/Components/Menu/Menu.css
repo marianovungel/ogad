@@ -73,3 +73,39 @@
     padding: 7px;
     border-radius: 10px;
 }
+@media (max-width: 1070px){
+    .title{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 960px){
+    .logoClass{
+        height: 70px;
+    }
+    .menuEscolha{
+        width: 65%;
+    }
+    .selectButton{
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .itemMenu{
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--verde);
+        padding: 7px;
+        cursor: pointer;
+    }
+    .itemMenu:hover{
+        height: 50px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+@media (max-width: 880px){
+    .textTitle{
+        display: none;
+    }
+}
