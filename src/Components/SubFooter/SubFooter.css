@@ -47,3 +47,42 @@
     color: #f0fbf9;
     transition: 0.3s;
 }
+@media (max-width: 1200px){
+    .imgSubFooter{
+        height: 200px;
+    }
+}
+@media (max-width: 900px){
+    .quemTitle{
+        font-size: 1rem;
+    }
+    .itemQuem{
+        font-size: 0.7rem;
+    }
+    .imageSubFooter{
+        width: 20%;
+    }
+    .imgSubFooter{
+        height: 150px;
+    }
+    .subFooterContent{
+        width: 93%;
+    }
+}
+@media (max-width: 600px){
+    .quemTitle{
+        font-size: 0.8rem;
+    }
+    .itemQuem{
+        font-size: 0.7rem;
+    }
+    .imageSubFooter{
+        width: 20%;
+    }
+    .imgSubFooter{
+        height: 130px;
+    }
+    .allSubFooter{
+        width: 60%;
+    }
+}

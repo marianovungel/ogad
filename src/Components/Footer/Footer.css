@@ -43,3 +43,14 @@
     color: #F7FF93;
     transition: 0.3s;
 }
+@media (max-width: 500px){
+    .contenFooter{
+        width: 93%;
+    }
+    .VoltarArrow{
+        font-size: 1rem;
+    }
+    .textFooter{
+        font-size: 0.8rem;
+    }
+}

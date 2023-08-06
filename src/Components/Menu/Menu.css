@@ -109,3 +109,53 @@
         display: none;
     }
 }
+@media (max-width: 580px){
+    .fullMenu{
+        width: 93%;
+    }
+}
+@media (max-width: 500px){
+    .itemMenu{
+        font-size: 0.9rem;
+        height: 30px;
+    }
+    .itemMenu:hover{
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .selectButton{
+        font-size: 0.9rem;
+        height: 30px;
+        width: 40px;
+    }
+    .menuEscolha{
+        width: 70%;
+    }
+}
+@media (max-width: 450px){
+    .itemMenu{
+        font-size: 0.7rem;
+        height: 30px;
+        width: 30px;
+    }
+    .itemMenu:hover{
+        height: 30px;
+        width: 30px;
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .selectButton{
+        font-size: 0.7rem;
+        width: 30px;
+        height: 30px;
+        width: 40px;
+        margin: 0px;
+    }
+    .menuEscolha{
+        width: 80%;
+    }
+    .logoClass{
+        height: 60px;
+    }
+}

@@ -89,13 +89,13 @@ export default function Home() {
           </div>
           <div className="textHistor">
             <div className="titleHistory">História de OGAD</div>
-            <div className="textPHistory">
+            <p className="textPHistory">
               O Observatório Guineense sobre Droga e outras Drogas (OGAD),
               é uma organização de iniciativa privada
               fundada em 2020, que visa acompanhar e relatar casos de
               consumo de droga de cidadãos guineenses na Guine-Bissaue 
               e nas Diásporas Guineense no mundo Todo.
-            </div>
+            </p>
             <button className="buttonHistory">
               Sobre OGAD 
               <i className="fa-solid fa-circle-chevron-right cicleColor"></i>
