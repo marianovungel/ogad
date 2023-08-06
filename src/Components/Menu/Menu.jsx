@@ -17,7 +17,8 @@ export default function Menu({select}) {
             </div>
         </div>
         <div className="menuEscolha">
-            <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div>
+            <div className={selectItem==="inicio" ? "itemMenu": "itemMenu"}>Início</div>
+            {/* <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div> */}
             <div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div>
             <div className={selectItem==="3" ? "selectButton": "itemMenu"}>Projetos</div>
             <div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidade</div>

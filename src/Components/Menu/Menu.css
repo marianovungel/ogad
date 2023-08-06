@@ -95,7 +95,7 @@
         font-size: 1rem;
         font-weight: 600;
         color: var(--verde);
-        padding: 7px;
+        padding: 5px;
         cursor: pointer;
     }
     .itemMenu:hover{
