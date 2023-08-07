@@ -4,11 +4,13 @@ import Header from '../../Components/Header/Header'
 import Menu from '../../Components/Menu/Menu'
 import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
+import Humburguer from '../../Components/Humburguer/Humburguer'
 
 export default function Home() {
   return (
     <div className='Home'>
       <Header />
+      <Humburguer />
       <Menu select={"inicio"} />
       <div className="imagemContent">
         <div className="backImgContent">

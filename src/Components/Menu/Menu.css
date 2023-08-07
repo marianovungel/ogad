@@ -159,3 +159,8 @@
         height: 60px;
     }
 }
+@media (max-width: 650px){
+    .Menu{
+        display: none;
+    }
+}
