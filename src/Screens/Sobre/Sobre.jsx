@@ -58,6 +58,40 @@ export default function Sobre() {
                 </p>
             </div>
         </div>
+        <div className="membros">
+            <div className="oitentaMembros">
+                <div className="headerMembros">
+                    <div className="TitleMembros">Membros Fundadores</div>
+                    <p className="pMembros">Os Combatentes Que Iniciaram o Projeto</p>
+                </div>
+                <div className="itemMembros">
+                    <div className="cardMembro">
+                        <div className="imgCardMembro">
+                            <img src="./iva.jpeg" alt="" className="imageCardMembro" />
+                        </div>
+                        <div className="NameCArdMembro">Ivanilson</div>
+                        <div className="descCArdMembro">Sou Licenciado em Letras (pt-br) e sou o Fundador deste site...</div>
+                        <div className="ButtonCArdMembro">
+                            <button className="cardItemButtonMembro">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                    <div className="cardMembro">
+                        <div className="imgCardMembro">
+                            <img src="./mar.jpeg" alt="" className="imageCardMembro" />
+                        </div>
+                        <div className="NameCArdMembro">Mariano Vunge</div>
+                        <div className="descCArdMembro">Sou Estudante de Engenharia da computação, e sou o desenvolvedor fulltrack deste site...</div>
+                        <div className="ButtonCArdMembro">
+                            <button className="cardItemButtonMembro">
+                                Saiba mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   )
 }
