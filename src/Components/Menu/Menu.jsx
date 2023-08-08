@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Menu.css'
+import { Link } from 'react-router-dom'
 
 export default function Menu({select}) {
   const [selectItem, setSelectItem] = useState(select)
@@ -17,9 +18,9 @@ export default function Menu({select}) {
             </div>
         </div>
         <div className="menuEscolha">
-            <div className={selectItem==="inicio" ? "itemMenu": "itemMenu"}>Início</div>
+            <Link to='/'><div className={selectItem==="inicio" ? "itemMenu": "itemMenu"}>Início</div></Link>
             {/* <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div> */}
-            <div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div>
+            <Link to='/sobre'><div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div></Link>
             <div className={selectItem==="3" ? "selectButton": "itemMenu"}>Projetos</div>
             <div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidade</div>
             <div className={selectItem==="5" ? "selectButton": "itemMenu"}>Contato</div>

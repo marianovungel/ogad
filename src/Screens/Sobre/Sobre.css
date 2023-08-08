@@ -1,0 +1,104 @@
+.Sobre{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.svgContent{
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../../../public/svg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.widthSvgContent{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.textDescOGADSobre{
+    color: #fff;
+    margin: 0px;
+    font-size: 1.4rem;
+}
+.pSvgContent{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.borderContent{
+    display: flex;
+    align-items: flex-start;
+    width: 170px;
+    height: 110px;
+    border: none;
+    color: #fff;
+    margin: 5px;
+}
+.numberBorder{
+    font-size: 1.3rem;
+    color: var(--amarelo);
+    margin-left: -50px;
+    margin-top: -15px;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 7px 2px var(--amareloC);
+}
+.borderContentItem{
+    width: 140px;
+    height: 80px;
+    border: none;
+    border: 3px solid var(--amarelo);
+    color: #fff;
+    background-color: var(--verdeE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 7px 2px var(--amareloC);
+    text-align: center;
+}
+.nossaSobreFull{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+    background-color: #ddd;
+    margin-top: 100px;
+}
+.oitentaNossa{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.TitleNossa{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 3rem;
+    color: var(--verdeE);
+}
+.paragrafoNossa{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: justify;
+    font-size: 1.2rem;
+}
