@@ -356,3 +356,11 @@
         width: 80%;
     }
 }
+@media (max-width: 450px){
+    .TitleNossa{
+        font-size: 2rem;
+    }
+    .borderContent{
+        display: none;
+    }
+}
