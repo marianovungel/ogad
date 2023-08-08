@@ -1,5 +1,6 @@
 import React from 'react'
 import './Humburguer.css'
+import { Link } from 'react-router-dom';
 
 export default function Humburguer() {
     function myFunction() {
@@ -20,6 +21,8 @@ export default function Humburguer() {
                 <i class="fa-solid fa-bars iall"></i>
             </div>
             <div id="myLinks">
+                <Link to='/'>Início</Link> 
+                <Link to='/sobre'>Sobre</Link>
                 <a href="#news">Início</a>
                 <a href="#contact">Sobre</a>
                 <a href="#about">Projetos</a>
