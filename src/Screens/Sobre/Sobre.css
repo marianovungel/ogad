@@ -195,7 +195,7 @@
     padding: 20px 0px 10px 0px;
 }
 .cardItemButtonMembro{
-    width: 140px;
+    width: 110px;
     height: 45px;
     border: none;
     border-radius: 5px;
@@ -204,4 +204,155 @@
     cursor: pointer;
     background-color: var(--verdeE);
     box-shadow: 1px 1px 7px 2px var(--verde);
+}
+
+/* card membro 2 */
+.itemMembros2{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    
+}
+.cardMembro2{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #dddddd75;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.imageCardMembro2{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.imgCardMembro2{
+    width: 95%;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.NameAndCardgoCArdMembro{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.paddingIconMembro{
+    padding: 0px 5px;
+}
+.nomeMembro2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--verdeE);
+    text-decoration: none;
+    font-style: normal;
+}
+.CargoDoMembro2{
+    font-weight: 400;
+    font-style: italic;
+}
+@media (max-width: 1350px){
+    .pSvgContent{
+        width: 55%;
+    }
+}
+@media (max-width: 1230px){
+    .pSvgContent{
+        width: 50%;
+        height: 300px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .cardMembro2{
+        width: 46%;
+    }
+    .textDescOGADSobre{
+        font-size: 1.4rem;
+        color: #666;
+    }
+    .textBack{
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 1230px){
+    .oitentaMembros{
+        width: 80%;
+    }
+}
+@media (max-width: 960px){
+    .oitentaMembros{
+        width: 90%;
+    }
+    .widthSvgContent{
+        width: 90%;
+    }
+    .nossaSobreFull{
+        margin-top: 0px;
+    }
+}
+@media (max-width: 848px){
+    .oitentaMembros{
+        width: 95%;
+    }
+    .widthSvgContent{
+        width: 95%;
+    }
+    .nossaSobreFull{
+        margin-top: 0px;
+    }
+    .DesativarborderContent{
+        display: none;
+    }
+    .pSvgContent{
+        width: 50%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 800px){
+    .oitentaMembros{
+        width: 70%;
+    }
+    .itemMembros2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardMembro2{
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+    }
+    .textDescOGADSobre{
+        color: #fff;
+    }
+}
+@media (max-width: 520px){
+    .textDescOGADSobre{
+        font-size: 1rem;
+    }
+    .oitentaMembros{
+        width: 90%;
+    }
+    .oitentaNossa{
+        width: 80%;
+    }
 }

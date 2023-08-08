@@ -3,6 +3,8 @@ import './Sobre.css'
 import Header from '../../Components/Header/Header'
 import Humburguer from '../../Components/Humburguer/Humburguer'
 import Menu from '../../Components/Menu/Menu'
+import SubFooter from '../../Components/SubFooter/SubFooter'
+import Footer from '../../Components/Footer/Footer'
 
 export default function Sobre() {
   return (
@@ -32,7 +34,7 @@ export default function Sobre() {
                         </div>
                         <div className="numberBorder">02</div>
                     </div>
-                    <div className="borderContent">
+                    <div className="borderContent DesativarborderContent">
                         <div className="borderContentItem">
                             A drogas danificam a saúde...
                         </div>
@@ -64,34 +66,45 @@ export default function Sobre() {
                     <div className="TitleMembros">Membros Fundadores</div>
                     <p className="pMembros">Os Combatentes Que Iniciaram o Projeto</p>
                 </div>
-                <div className="itemMembros">
-                    <div className="cardMembro">
-                        <div className="imgCardMembro">
-                            <img src="./iva.jpeg" alt="" className="imageCardMembro" />
+                <div className="itemMembros2">
+                    <div className="cardMembro2">
+                        <div className="imgCardMembro2">
+                            <img src="./iva.jpeg" alt="" className="imageCardMembro2" />
+                            <div className="NameAndCardgoCArdMembro">
+                                <div className="textsMembroCardNome">
+                                    <div className="nomeMembro2">Ivanilson</div>
+                                    <i className="CargoDoMembro2">Fundador</i>
+                                </div>
+                                <button className="cardItemButtonMembro">
+                                    Saiba mais
+                                    <i class="fa-solid fa-user-plus paddingIconMembro"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div className="NameCArdMembro">Ivanilson</div>
                         <div className="descCArdMembro">Sou Licenciado em Letras (pt-br) e sou o Fundador deste site...</div>
-                        <div className="ButtonCArdMembro">
-                            <button className="cardItemButtonMembro">
-                                Saiba mais
-                            </button>
-                        </div>
                     </div>
-                    <div className="cardMembro">
-                        <div className="imgCardMembro">
-                            <img src="./mar.jpeg" alt="" className="imageCardMembro" />
+                    <div className="cardMembro2">
+                        <div className="imgCardMembro2">
+                            <img src="./mar.jpeg" alt="" className="imageCardMembro2" />
+                            <div className="NameAndCardgoCArdMembro">
+                                <div className="textsMembroCardNome">
+                                    <div className="nomeMembro2">Mariano Vunge</div>
+                                    <i className="CargoDoMembro2">Desenvolvedor</i>
+                                </div>
+                                <button className="cardItemButtonMembro">
+                                    Saiba mais
+                                    <i class="fa-solid fa-user-plus paddingIconMembro"></i>
+                                </button>
+                            </div>
                         </div>
-                        <div className="NameCArdMembro">Mariano Vunge</div>
-                        <div className="descCArdMembro">Sou Estudante de Engenharia da computação, e sou o desenvolvedor fulltrack deste site...</div>
-                        <div className="ButtonCArdMembro">
-                            <button className="cardItemButtonMembro">
-                                Saiba mais
-                            </button>
-                        </div>
+                        <div className="descCArdMembro">Sou Estudante Eng. Computação e desenvolvedor Fulltrack Js...</div>
                     </div>
+                    
                 </div>
             </div>
         </div>
+        <SubFooter />
+        <Footer />
     </div>
   )
 }
