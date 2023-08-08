@@ -18,7 +18,7 @@ export default function Humburguer() {
                 <img src='./logof.png' alt='' className='ImgHumburguer' />
             </a>
             <div  className="icon" onClick={myFunction}>
-                <i class="fa-solid fa-bars iall"></i>
+                <i className="fa-solid fa-bars iall"></i>
             </div>
             <div id="myLinks">
                 <Link to='/'>Início</Link> 
