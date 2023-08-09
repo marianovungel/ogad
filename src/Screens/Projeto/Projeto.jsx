@@ -95,6 +95,38 @@ export default function Projeto() {
                 ))}
             </div>
         </div>
+        <div className="imagemContent">
+            <div className="backImgContentBissau">
+                <div className="colorBackBissau">
+                    <div className="textBackTrie">
+                        <div className="elementCardTrie">
+                            <i className="fa-brands fa-pagelines sizeTrie"></i>
+                            <i className='numberTrie'>004</i>
+                            <div className="risco"></div>
+                            <div className="descTrie">PROJETOS ELABORADOS</div>
+                        </div>
+                        <div className="elementCardTrie">
+                            <i class="fa-solid fa-chart-line sizeTrie"></i>
+                            <i className='numberTrie'>003</i>
+                            <div className="risco"></div>
+                            <div className="descTrie">PROJETOS EXECUTADOS</div>
+                        </div>
+                        <div className="elementCardTrie">
+                            <i className="fa-solid fa-map-location-dot sizeTrie"></i>
+                            <i className='numberTrie'>002</i>
+                            <div className="risco"></div>
+                            <div className="descTrie">REGIÕES BENEFICIADAS</div>
+                        </div>
+                        <div className="elementCardTrie">
+                            <i className="fa-solid fa-person-harassing sizeTrie"></i>
+                            <i className='numberTrie'>150</i>
+                            <div className="risco"></div>
+                            <div className="descTrie">POPULAÇÃO ALCANÇADA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <SubFooter />
         <Footer />
     </div>

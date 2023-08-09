@@ -113,6 +113,41 @@
     padding: 15px 0px;
     text-align: justify;
 }
+.textBackTrie{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.elementCardTrie{
+    width:20%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sizeTrie{
+    font-size: 6rem;
+    color: var(--amarelo);
+    padding: 5px 0px;
+}
+.numberTrie{
+    color: var(--amarelo);
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+.descTrie{
+    color: var(--amarelo);
+    font-size: 0.8rem;
+    padding: 10px 0px;
+}
+.risco{
+    width: 100px;
+    height: 3px;
+    background-color: var(--amarelo);
+}
 @media (max-width: 1340px){
     .oitentaProjectsSecund{
         width: 90%;
@@ -134,6 +169,32 @@
     }
 }
 @media (max-width: 720px){
+    .textBackTrie{
+        width: 90%;
+    }
+    .sizeTrie{
+        font-size: 5rem;
+        color: var(--amarelo);
+        padding: 5px 0px;
+    }
+    .numberTrie{
+        color: var(--amarelo);
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 5px 0px;
+    }
+    .descTrie{
+        color: var(--amarelo);
+        font-size: 0.7rem;
+        padding: 10px 0px;
+        width: 80%;
+        text-align: center;
+    }
+    .risco{
+        width: 90px;
+        height: 3px;
+        background-color: var(--amarelo);
+    }
     .cardProjectsSecund{
         width: 240px;
     }
@@ -178,4 +239,62 @@
         flex-wrap: wrap;
     }
 
+}
+@media (max-width: 480px){
+    .textBackTrie{
+        width: 90%;
+        justify-content: space-between;
+    }
+    .sizeTrie{
+        font-size: 3.5rem;
+        color: var(--amarelo);
+        padding: 5px 0px;
+    }
+    .numberTrie{
+        color: var(--amarelo);
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 5px 0px;
+    }
+    .descTrie{
+        color: var(--amarelo);
+        font-size: 0.7rem;
+        padding: 10px 0px;
+        width: 80%;
+        text-align: center;
+    }
+    .risco{
+        width: 85px;
+        height: 3px;
+        background-color: var(--amarelo);
+    }
+}
+@media (max-width: 400px){
+    .textBackTrie{
+        width: 90%;
+        justify-content: space-between;
+    }
+    .sizeTrie{
+        font-size: 3rem;
+        color: var(--amarelo);
+        padding: 5px 0px;
+    }
+    .numberTrie{
+        color: var(--amarelo);
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 5px 0px;
+    }
+    .descTrie{
+        color: var(--amarelo);
+        font-size: 0.7rem;
+        padding: 10px 0px;
+        width: 80%;
+        text-align: center;
+    }
+    .risco{
+        width: 65px;
+        height: 3px;
+        background-color: var(--amarelo);
+    }
 }
