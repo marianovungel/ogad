@@ -24,7 +24,7 @@ export default function Humburguer() {
                 <Link to='/'>Início</Link> 
                 <Link to='/sobre'>Sobre</Link>
                 <Link to='/projeto'>Projetos</Link>
-                <a href="#about">Atividade</a>
+                <Link to='/atualidade'>Atividade</Link>
                 <a href="#about">Contatos</a>
             </div>
         </div>
