@@ -282,13 +282,13 @@
 }
 @media (max-width: 430px){
     .cardAtual{
-        width: 300px;
+        width: 350px;
     }
     .imgAtual{
-        width: 300px;
+        width: 350px;
     }
     .localContent{
-        width: 300px;
+        width: 350px;
     }
     .TitleAssociacao{
         font-size: 1.5rem;
