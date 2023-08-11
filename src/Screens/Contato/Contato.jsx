@@ -97,7 +97,7 @@ export default function Contato() {
                     <label for="cars" className='NegritoName'>Nome completo</label>
                     <i className="xege">*</i>
                 </div>
-                <input type="text" name="" id="" className="NomeFormItem" placeholder='Seu nome completo aqui...' required />
+                <input type="text" name="" id="" maxLength={100} className="NomeFormItem" placeholder='Seu nome completo aqui...' required />
             </div>
             <div className="EmailFormContent">
                 <div className="emailForm">
@@ -105,14 +105,14 @@ export default function Contato() {
                         <label for="cars" className='NegritoName'>E-mail</label>
                         <i className="xege">*</i>
                     </div>
-                    <input type="text" name="" id="" className="NomeFormItem" placeholder='Seu email aqui...' required />
+                    <input type="email" name="" maxLength={100} id="" className="NomeFormItem" placeholder='Seu email aqui...' required />
                 </div>
                 <div className="emailForm">
                     <div className="labelContent">
                         <label for="cars" className='NegritoName'>Telefone</label>
                         <i className="xege">*</i>
                     </div>
-                    <input type="text" name="" id="" className="NomeFormItem" required placeholder='Seu telefone aqui...' />
+                    <input type="tel" name="" id="" maxLength={20} className="NomeFormItem" required placeholder='Seu telefone aqui...' />
                 </div>
             </div>
             <div className="selectFormContent">
@@ -135,7 +135,7 @@ export default function Contato() {
                         <label for="cars" className='NegritoName'>Mensagem</label>
                         <i className="xege">*</i>
                     </div>
-                    <textarea id="w3review" placeholder='Sua Mensagem...' required name="w3review" rows="4" cols="50" className='messageFormItem'>
+                    <textarea id="w3review" maxLength={2000} placeholder='Sua Mensagem...' required name="w3review" rows="4" cols="50" className='messageFormItem'>
                     </textarea>
                     
                 </div>
