@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import './Contato.css'
 import Header from '../../Components/Header/Header'
 import Menu from '../../Components/Menu/Menu'
+import Humburguer from '../../Components/Humburguer/Humburguer'
 import ReCAPTCHA from "react-google-recaptcha";
 import Swal from 'sweetalert2';
+import SubFooter from '../../Components/SubFooter/SubFooter';
+import Footer from '../../Components/Footer/Footer';
 
 export default function Contato() {
     const  [status, setStatus] = useState(false)
@@ -30,11 +33,12 @@ export default function Contato() {
     <div className='Contato'>
       <Header />
       <Menu />
+      <Humburguer />
       <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent">Seu Contacto é importante</h1>
-                    <p className="paragradoFastContent">
+                    <h1 className="centerFastContent" id='newSizeTitle'>Seu Contacto é importante</h1>
+                    <p className="paragradoFastContent" id='newSizeP'>
                         O seu Parecer é importante para melhorar os nossos Serviços
                     </p>
                 </div>
@@ -148,6 +152,8 @@ export default function Contato() {
             </div>
         </form>
       </div>
+      <SubFooter />
+      <Footer />
     </div>
   )
 }
