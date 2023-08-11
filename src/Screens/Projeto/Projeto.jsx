@@ -39,6 +39,22 @@ import Footer from '../../Components/Footer/Footer'
             obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
             slg:"RESILIÊNCIA INSTITUCIONAL DOS PROCESSOS SOCIOECONÓMICOS E SOCIO-AMBIENTAIS"
         },
+        {
+            id:"5",
+            img:"./muro.jpg",
+            title:"Tiban Ankaterô",
+            desc:"Droga zero para uma sociedade melhor Institucional",
+            obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
+            slg:"RESILIÊNCIA INSTITUCIONAL DOS PROCESSOS SOCIOECONÓMICOS E SOCIO-AMBIENTAIS"
+        },
+        {
+            id:"6",
+            img:"./bissau.jpg",
+            title:"Tiban Ankaterô",
+            desc:"Droga zero para uma sociedade melhor Institucional",
+            obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
+            slg:"RESILIÊNCIA INSTITUCIONAL DOS PROCESSOS SOCIOECONÓMICOS E SOCIO-AMBIENTAIS"
+        },
         
     ]
 export default function Projeto() {
@@ -63,7 +79,7 @@ export default function Projeto() {
         <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent">NOSSOS PROJETOS</h1>
+                    <h1 className="centerFastContent">NOSSOS TEMAS</h1>
                     <p className="paragradoFastContent">
                         RESILIÊNCIA INSTITUCIONAL DOS PROCESSOS SOCIOECONÓMICOS E SOCIO-AMBIENTAIS
                     </p>

@@ -21,9 +21,10 @@ export default function Menu({select}) {
             <Link to='/'><div className={selectItem==="inicio" ? "itemMenu": "itemMenu"}>Início</div></Link>
             {/* <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div> */}
             <Link to='/sobre'><div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div></Link>
-            <Link to='/projeto'><div className={selectItem==="3" ? "selectButton": "itemMenu"}>Projetos</div></Link>
+            <Link to='/temas'><div className={selectItem==="3" ? "selectButton": "itemMenu"}>Temas</div></Link>
             <Link to='/atualidade'><div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidade</div></Link>
             <Link to='/contatos'><div className={selectItem==="5" ? "selectButton": "itemMenu"}>Contato</div></Link>
+            <Link to='/colaboacao'><div className={selectItem==="5" ? "selectButton": "itemMenu"}>Colaboração</div></Link>
         </div>
       </div>
     </div>
