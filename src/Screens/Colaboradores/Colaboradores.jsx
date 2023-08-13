@@ -61,7 +61,7 @@ export default function Colaboradores() {
         </div>
         <div className="TitlePesquisadores">Colaboradores</div>
         {db.map((d)=>(
-            <div className={ d.ordem % 2 === 0 ? "pesquisawhite" : "pesquisadores" }>
+            <div className={ d.ordem % 2 === 0 ? "pesquisawhite" : "pesquisadores" } key={d.id}>
                 <div className="oitentaPesquisadores">
                     <div className={ d.ordem % 2 === 0 ? "cardColaboradores":"cardColaboradoresWhite"}>
                         <div className="descColaboradorPes">

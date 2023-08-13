@@ -77,7 +77,7 @@ export default function Sobre() {
                                 </div>
                                 <button className="cardItemButtonMembro">
                                     Saiba mais
-                                    <i class="fa-solid fa-user-plus paddingIconMembro"></i>
+                                    <i className="fa-solid fa-user-plus paddingIconMembro"></i>
                                 </button>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ export default function Sobre() {
                                 </div>
                                 <button className="cardItemButtonMembro">
                                     Saiba mais
-                                    <i class="fa-solid fa-user-plus paddingIconMembro"></i>
+                                    <i className="fa-solid fa-user-plus paddingIconMembro"></i>
                                 </button>
                             </div>
                         </div>

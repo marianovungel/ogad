@@ -122,7 +122,7 @@ export default function Projeto() {
                             <div className="descTrie">PROJETOS ELABORADOS</div>
                         </div>
                         <div className="elementCardTrie">
-                            <i class="fa-solid fa-chart-line sizeTrie"></i>
+                            <i className="fa-solid fa-chart-line sizeTrie"></i>
                             <i className='numberTrie'>003</i>
                             <div className="risco"></div>
                             <div className="descTrie">PROJETOS EXECUTADOS</div>

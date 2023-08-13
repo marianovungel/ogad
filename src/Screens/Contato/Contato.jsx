@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contato.css'
 import Header from '../../Components/Header/Header'
 import Menu from '../../Components/Menu/Menu'
@@ -10,15 +12,17 @@ import Footer from '../../Components/Footer/Footer';
 
 export default function Contato() {
     const  [status, setStatus] = useState(false)
-    function onChange(value) {
-        if(value){
-            setStatus(true)
-        }else{
-            setStatus(false)
-        }
-    }
-    const submitSearch = (e)=>{
-        e.preventDefault()
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_x1gywkk', 'template_nha5mop', form.current, 'NydSs6yI1bSQuFoaC')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
 
         Swal.fire({
             position: 'center',
@@ -28,7 +32,16 @@ export default function Contato() {
             timer: 1500
           })
           window.location.replace("/contatos");
+    };
+
+    function onChange(value) {
+        if(value){
+            setStatus(true)
+        }else{
+            setStatus(false)
+        }
     }
+    
   return (
     <div className='Contato'>
       <Header />
@@ -67,7 +80,7 @@ export default function Contato() {
                         <i className="fa-regular fa-envelope sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">E-mail</div>
-                            <div className="EnderecoItemTellRed">ogad@gmail.com | ivannildo@gmail.com</div>
+                            <div className="EnderecoItemTellRed">observatoriogueneense@gmail.com | ivannildo@gmail.com</div>
                         </div>
                     </div>
                 </div>
@@ -90,38 +103,38 @@ export default function Contato() {
         </div>
       </div>
       <div className="formContent">
-        <form onSubmit={submitSearch} className="oitenteForm">
+        <form ref={form} onSubmit={sendEmail} className="oitenteForm">
             <div className="titleForm">Envie-nos sua mensagem!</div>
             <div className="nomeForm">
                 <div className="labelContent">
-                    <label for="cars" className='NegritoName'>Nome completo</label>
+                    <label  className='NegritoName'>Nome completo</label>
                     <i className="xege">*</i>
                 </div>
-                <input type="text" name="" id="" maxLength={100} className="NomeFormItem" placeholder='Seu nome completo aqui...' required />
+                <input type="text" name="user_name" id="user_name" maxLength={100} className="NomeFormItem" placeholder='Seu nome completo aqui...' required />
             </div>
             <div className="EmailFormContent">
                 <div className="emailForm">
                     <div className="labelContent">
-                        <label for="cars" className='NegritoName'>E-mail</label>
+                        <label  className='NegritoName'>E-mail</label>
                         <i className="xege">*</i>
                     </div>
-                    <input type="email" name="" maxLength={100} id="" className="NomeFormItem" placeholder='Seu email aqui...' required />
+                    <input type="email" id="user_email" maxLength={100} className="NomeFormItem" placeholder='Seu email aqui...' required />
                 </div>
                 <div className="emailForm">
                     <div className="labelContent">
-                        <label for="cars" className='NegritoName'>Telefone</label>
+                        <label  className='NegritoName'>Telefone</label>
                         <i className="xege">*</i>
                     </div>
-                    <input type="tel" name="" id="" maxLength={20} className="NomeFormItem" required placeholder='Seu telefone aqui...' />
+                    <input type="tel" name="user_tell" id="user_tell" maxLength={20} className="NomeFormItem" required placeholder='Seu telefone aqui...' />
                 </div>
             </div>
             <div className="selectFormContent">
                 <div className="nomeForm">
                     <div className="labelContent">
-                        <label for="cars" className='NegritoName'>Assunto</label>
+                        <label  className='NegritoName'>Assunto</label>
                         <i className="xege">*</i>
                     </div>
-                    <select name="cars" id="cars" className="SeletFormItem" required>
+                    <select name="user_title" id="user_title" className="SeletFormItem" required>
                         <option value="Pedir Informações">Pedir Informações</option>
                         <option value="Solicitar parceria">Solicitar parceria</option>
                         <option value="Suporte Técnico">Suporte Técnico</option>
@@ -132,10 +145,10 @@ export default function Contato() {
             <div className="messagemForm">
                 <div className="nomeForm">
                     <div className="labelContent">
-                        <label for="cars" className='NegritoName'>Mensagem</label>
+                        <label  className='NegritoName'>Mensagem</label>
                         <i className="xege">*</i>
                     </div>
-                    <textarea id="w3review" maxLength={2000} placeholder='Sua Mensagem...' required name="w3review" rows="4" cols="50" className='messageFormItem'>
+                    <textarea id="message" maxLength={2000} placeholder='Sua Mensagem...' required name="message" rows="4" cols="50" className='messageFormItem'>
                     </textarea>
                     
                 </div>
@@ -148,7 +161,7 @@ export default function Contato() {
                 />
             </div>
             <div className="buttonFormMessage">
-                <button disabled={!status} id={!status ? "disableCursor": ""} className="buttonMSM" type="submit">Enviar Mensagem</button>
+                <button disabled={!status} id={!status ? "disableCursor": ""} value="Send" className="buttonMSM" type="submit">Enviar Mensagem</button>
             </div>
         </form>
       </div>
