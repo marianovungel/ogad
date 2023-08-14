@@ -5,6 +5,7 @@ import Menu from '../../Components/Menu/Menu'
 import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
 import Humburguer from '../../Components/Humburguer/Humburguer'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -72,7 +73,7 @@ export default function Home() {
                   Com atuação em todo o páis, agora se expandindo
                   em toda diáspora Guineense
                 </div>
-                <button className="leftButtonBissau">Conheça a gente <i className="fa-solid fa-circle-check cicleColor"></i></button>
+                <Link to='/sobre'><button className="leftButtonBissau">Conheça a gente <i className="fa-solid fa-circle-check cicleColor"></i></button></Link>
               </div>
               <div className="centerBissau"></div>
               <div className="rightBissau">
@@ -98,10 +99,9 @@ export default function Home() {
               consumo de droga de cidadãos guineenses na Guine-Bissaue 
               e nas Diásporas Guineense no mundo Todo.
             </p>
-            <button className="buttonHistory">
-              Sobre OGAD 
-              <i className="fa-solid fa-circle-chevron-right cicleColor"></i>
-            </button>
+            <Link to='/sobre'>
+              <button className="buttonHistory">Sobre OGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>
+            </Link>
           </div>
         </div>
       </div>
