@@ -6,6 +6,7 @@ import Projeto from './Screens/Projeto/Projeto';
 import Atual from './Screens/Atual/Atual';
 import Contato from './Screens/Contato/Contato';
 import Colaboradores from './Screens/Colaboradores/Colaboradores';
+import Slide from './Components/Slide/Slide';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/atualidade" element={<Atual /> } exact />
             <Route path="/contatos" element={<Contato /> } exact />
             <Route path="/colaboacao" element={<Colaboradores /> } exact />
+            <Route path="/slide" element={<Slide /> } exact />
           </Routes>
         </Router>
     </div>
