@@ -6,6 +6,7 @@ import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
 import Humburguer from '../../Components/Humburguer/Humburguer'
 import { Link } from 'react-router-dom'
+import Slide from '../../Components/Slide/Slide'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Header />
       <Humburguer />
       <Menu select={"inicio"} />
-      <div className="imagemContent">
+      {/* <div className="imagemContent">
         <div className="backImgContent">
           <div className="colorBack">
             <div className="textBack">
@@ -23,7 +24,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Slide />
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">

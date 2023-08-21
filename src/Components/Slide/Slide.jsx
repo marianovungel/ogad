@@ -2,6 +2,32 @@ import React from 'react'
 import './Slide.css'
 
 export default function Slide() {
+  var counter = 1;
+
+
+      setInterval(function(){
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if(counter > 4){
+              counter = 1;
+          }
+      }, 12000)
+
+
+      const Back=()=>{
+        counter--;
+        if(counter < 1){
+          counter = 1;
+        }
+        document.getElementById('radio' + counter).checked = true;
+      }
+      const Go=()=>{
+        counter++;
+        if(counter > 4){
+          counter = 4;
+        }
+        document.getElementById('radio' + counter).checked = true;
+      }
   return (
     <div className='Slide'>
       <div className="slideFull">{/* slide com 100% */}
@@ -35,10 +61,20 @@ export default function Slide() {
           </div>
 
           <div className="navigation-manual">
-            <label for="radio1" className="manual-btn"></label>
-            <label for="radio2" className="manual-btn"></label>
-            <label for="radio3" className="manual-btn"></label>
-            <label for="radio4" className="manual-btn"></label>
+            <label htmlFor='radio1' className="manual-btn"></label>
+            <label htmlFor='radio2' className="manual-btn"></label>
+            <label htmlFor='radio3' className="manual-btn"></label>
+            <label htmlFor='radio4' className="manual-btn"></label>
+          </div>
+          <div className="buttonGo-manual">
+            <div className="ButtonBack" onClick={Back}>
+              <div className="iconButtomSlide"><i className="fa-solid fa-chevron-left colorSlideIcom"></i></div>
+              <div className="vazioButtonH"></div>
+            </div>
+            <div className="ButtonBack" onClick={Go}>
+              <div className="vazioButtonH"></div>
+              <div className="iconButtomSlideRight"><i className="fa-solid fa-chevron-right colorSlideIcom"></i></div>
+            </div>
           </div>
         </div>
         </div>
