@@ -9,7 +9,7 @@ import Footer from '../../Components/Footer/Footer'
     const data = [
         {
             id:"1",
-            img:"./rio.jpg",
+            img:"./cgad.jpeg",
             title:"Construir Resiliência",
             desc:"O consumo de só traz problemas Institucional",
             obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
@@ -17,7 +17,7 @@ import Footer from '../../Components/Footer/Footer'
         },
         {
             id:"2",
-            img:"./q.png",
+            img:"././cgad.jpeg",
             title:"Mulheres Rurais",
             desc:"A troga não é a solução Institucional",
             obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
@@ -33,7 +33,7 @@ import Footer from '../../Components/Footer/Footer'
         },
         {
             id:"4",
-            img:"./droga1.jpg",
+            img:"././cgad.jpeg",
             title:"Tiban Ankaterô",
             desc:"Droga zero para uma sociedade melhor Institucional",
             obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",
@@ -41,7 +41,7 @@ import Footer from '../../Components/Footer/Footer'
         },
         {
             id:"5",
-            img:"./muro.jpg",
+            img:"././cgad.jpeg",
             title:"Tiban Ankaterô",
             desc:"Droga zero para uma sociedade melhor Institucional",
             obj:"Fortalecer e aumentar a capacidade da Tiniguena como ator relevante na sociedade civil, com capacidade de influenciar políticas públicas estratégicas nos níveis nacional e regional.",

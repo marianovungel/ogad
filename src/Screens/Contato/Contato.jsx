@@ -80,7 +80,7 @@ export default function Contato() {
                         <i className="fa-regular fa-envelope sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">E-mail</div>
-                            <div className="EnderecoItemTellRed">observatoriogueneense@gmail.com | ivannildo@gmail.com</div>
+                            <div className="EnderecoItemTellRed">cgadguinebissau@gmail.com | ivannildo@gmail.com</div>
                         </div>
                     </div>
                 </div>

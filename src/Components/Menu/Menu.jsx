@@ -11,10 +11,10 @@ export default function Menu({select}) {
     <div className='Menu'>
       <div className="fullMenu">
         <div className="logoImg">
-            <img src="./ogad.png" className='logoClass' alt="" />
+            <img src="./cgadt.png" className='logoClass' alt="" />
             <div className="textTitle">
-                <p className="title">OBSERVATÓRIO GUINEENSE</p>
-                <p className="title">SOBRE ÁLCOOL E OUTRAS DROGAS</p>
+                <p className="title">CENTRO DE PESQUISA GUINEENSE</p>
+                <p className="title">EM ÁLCOOL E OUTRAS DROGAS</p>
             </div>
         </div>
         <div className="menuEscolha">

@@ -39,7 +39,7 @@ export default function Home() {
         <div className="textContentIntrodactionFull">
           <div className="cardObjectivos">
             <div className="imagemCardObj">
-              <img src="./cidade.jpg" alt="" className="imgCardObj" />
+              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
             </div>
             <div className="textCArdObj">
               <div className="titleCardObj">VISÃO</div>
@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="cardObjectivos">
             <div className="imagemCardObj">
-              <img src="./rio.jpg" alt="" className="imgCardObj" />
+              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
             </div>
             <div className="textCArdObj">
               <div className="titleCardObj">MISSÃO</div>
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
           <div className="cardObjectivos">
             <div className="imagemCardObj">
-              <img src="./muro.jpg" alt="" className="imgCardObj" />
+              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
             </div>
             <div className="textCArdObj">
               <div className="titleCardObj">VALORES E PRINCÍPIOS</div>

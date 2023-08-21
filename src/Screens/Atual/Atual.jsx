@@ -85,7 +85,7 @@ export default function Atual() {
                 <div className="cardAtual" key={d.id}>
                         <div className="imagemAtual">
                             <img src={d.img} alt="" className="imgAtual" />
-                            <img src="./logof.png" alt="" className="imgLogoAtual" />
+                            <img src="././cgadt.png" alt="" className="imgLogoAtual" />
                         </div>
                         <div className="allTextAtual">
                             <div className="titleAtual">
@@ -123,7 +123,7 @@ export default function Atual() {
                     <div className="associacaoFour">
                         <div className="conTentCarAss">
                             <div className="contentAssociacaoCard">
-                                <div className="TitleAssociacao">Sede Social da OGAD</div>
+                                <div className="TitleAssociacao">Sede Social da CGAD</div>
                                 <div className="localAssociacao">
                                 <i className="fa-solid fa-map-location-dot"></i><i className="locationAsso">Fortaleza/Benfica</i>
                                 </div>
@@ -131,16 +131,16 @@ export default function Atual() {
                                     <i className="fa-solid fa-phone"></i><i className="locationAsso">+(55) 85 991 392 688</i>
                                 </div>
                                 <div className="emailAssociacao">
-                                    <i className="fa-solid fa-envelope"></i><i className="locationAsso">ogad@gmail.com</i>
+                                    <i className="fa-solid fa-envelope"></i><i className="locationAsso">cgadguinebissau@gmail.com</i>
                                 </div>
                             </div>
                         </div>
                         <div className="conTentCarAssFour">
                             <div className="contentAssociacaoCard marginTopAssociacaao">
-                                <div className="logoAssociacao"><img src="./logof.png" alt="" className="logoimgAssociacao" /></div>
-                                <div className="TitleAssociacao">Slogan da OGAD</div>
+                                <div className="logoAssociacao"><img src="././cgadt.png" alt="" className="logoimgAssociacao" /></div>
+                                <div className="TitleAssociacao">Slogan da CGAD</div>
                                 <div className="emailAssociacao">
-                                    <i className="locationAsso">OGAD, o controle e o acompanhamento do consumo de drogas para uma Guine-Bissau melhor...</i>
+                                    <i className="locationAsso">CGAD, o controle e o acompanhamento do consumo de drogas para uma Guine-Bissau melhor...</i>
                                 </div>
                             </div>
                         </div>

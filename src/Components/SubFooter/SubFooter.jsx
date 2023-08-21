@@ -6,7 +6,7 @@ export default function SubFooter() {
     <div className='SubFooter'>
       <div className="subFooterContent">
         <div className="imageSubFooter">
-            <img src="./logof.png" alt="" className="imgSubFooter" />
+            <img src="./cgadf.png" alt="" className="imgSubFooter" />
         </div>
         <div className="allSubFooter">
             <div className="quem">

@@ -16,13 +16,13 @@ export default function Sobre() {
             <div className="widthSvgContent">
                 <div className="textSvgContent">
                     <div className="textBack">
-                        <p className="ogadText">OGAD</p>
-                        <p className="textDescOGADSobre">Observatório Guineense </p>
-                        <p className="textDescOGADSobre">sobre álcool e outras drogas...</p>
+                        <p className="ogadText">CGAD</p>
+                        <p className="textDescOGADSobre">Centro de Pesquisa Guineense </p>
+                        <p className="textDescOGADSobre">em álcool e outras drogas...</p>
                     </div>
                 </div>
                 <div className="pSvgContent">
-                    <div className="borderContent">
+                    {/* <div className="borderContent">
                         <div className="borderContentItem">
                             A gente apoia o não uso das drogas...
                         </div>
@@ -39,7 +39,7 @@ export default function Sobre() {
                             A drogas danificam a saúde...
                         </div>
                         <div className="numberBorder">03</div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
