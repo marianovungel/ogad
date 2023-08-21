@@ -52,14 +52,14 @@ export default function Colaboradores() {
         <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent" id='newSizeTitle'>Nossos Colaboradores</h1>
+                    <h1 className="centerFastContent" id='newSizeTitle'>Nossos Parceiros</h1>
                     <p className="paragradoFastContent" id='newSizeP'>
-                        O seu Parecer é importante para melhorar os nossos Serviços
+                        A vossa Parecer é importante para melhorar os nossos Serviços
                     </p>
                 </div>
             </div>
         </div>
-        <div className="TitlePesquisadores">Colaboradores</div>
+        <div className="TitlePesquisadores">Parceiros</div>
         {db.map((d)=>(
             <div className={ d.ordem % 2 === 0 ? "pesquisawhite" : "pesquisadores" } key={d.id}>
                 <div className="oitentaPesquisadores">
