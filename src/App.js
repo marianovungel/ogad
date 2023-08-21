@@ -18,7 +18,7 @@ function App() {
             <Route path="/temas" element={<Projeto /> } exact />
             <Route path="/atualidade" element={<Atual /> } exact />
             <Route path="/contatos" element={<Contato /> } exact />
-            <Route path="/colaboacao" element={<Colaboradores /> } exact />
+            <Route path="/parcerias" element={<Colaboradores /> } exact />
           </Routes>
         </Router>
     </div>

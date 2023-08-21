@@ -15,6 +15,9 @@
     justify-content: center;
     align-items: center;
 }
+.colorMembroBackground{
+    background-color: #f6f6f6;
+}
 .widthSvgContent{
     width: 80%;
     display: flex;

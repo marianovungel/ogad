@@ -45,7 +45,7 @@ export default function Sobre() {
         </div>
         <div className="nossaSobreFull">
             <div className="oitentaNossa">
-                <div className="TitleNossa">A nossa história</div>
+                <div className="TitleNossa">Nossa história</div>
                 <p className="paragrafoNossa">
                     A Tiniguena é uma organização não governamental guineense fundada em 1991, que visa promover o desenvolvimento participativo e durável, baseado na conservação dos recursos naturais e culturais e no exercício da cidadania.
                 </p>
@@ -98,6 +98,49 @@ export default function Sobre() {
                             </div>
                         </div>
                         <div className="descCArdMembro">Sou Estudante Eng. Computação e desenvolvedor Fulltrack Js...</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div className="membros colorMembroBackground">
+            <div className="oitentaMembros">
+                <div className="headerMembros">
+                    <div className="TitleMembros">Colaboradores</div>
+                    <p className="pMembros">Os Combatentes Que Iniciaram o Projeto</p>
+                </div>
+                <div className="itemMembros2">
+                    <div className="cardMembro2">
+                        <div className="imgCardMembro2">
+                            <img src="./cgadt.png" alt="" className="imageCardMembro2" />
+                            <div className="NameAndCardgoCArdMembro">
+                                <div className="textsMembroCardNome">
+                                    <div className="nomeMembro2">Nome</div>
+                                    <i className="CargoDoMembro2">função</i>
+                                </div>
+                                <button className="cardItemButtonMembro">
+                                    Saiba mais
+                                    <i className="fa-solid fa-user-plus paddingIconMembro"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="descCArdMembro">Breve descrição do colaborador...</div>
+                    </div>
+                    <div className="cardMembro2">
+                        <div className="imgCardMembro2">
+                            <img src="./cgadt.png" alt="" className="imageCardMembro2" />
+                            <div className="NameAndCardgoCArdMembro">
+                                <div className="textsMembroCardNome">
+                                    <div className="nomeMembro2">Nome</div>
+                                    <i className="CargoDoMembro2">Função</i>
+                                </div>
+                                <button className="cardItemButtonMembro">
+                                    Saiba mais
+                                    <i className="fa-solid fa-user-plus paddingIconMembro"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="descCArdMembro">Breve descrição do colaborador...</div>
                     </div>
                     
                 </div>
