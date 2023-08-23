@@ -6,10 +6,10 @@ export default function Header() {
     <div className='Header'>
         <div className="allcontent">
             <div className="flag">
-                <div className="flagItem"><img src="./1.png" className='itemImg' alt="" /></div>
+                {/* <div className="flagItem"><img src="./1.png" className='itemImg' alt="" /></div>
                 <div className="flagItem"><img src="./2.png" className='itemImg' alt="" /></div>
                 <div className="flagItem"><img src="./3.png" className='itemImg' alt="" /></div>
-                <div className="flagItem"><img src="./4.png" className='itemImg' alt="" /></div>
+                <div className="flagItem"><img src="./4.png" className='itemImg' alt="" /></div> */}
             </div>
             <div className="menu">
                 <button className='doar'>Doar</button>
