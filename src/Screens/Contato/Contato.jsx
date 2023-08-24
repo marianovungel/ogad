@@ -41,6 +41,19 @@ export default function Contato() {
             setStatus(false)
         }
     }
+
+    const Facebook  = ()=>{
+        window.open('https://www.facebook.com/profile.php?id=61550249258004')
+    }
+    const Twitter  = ()=>{
+        window.open('https://twitter.com/CGAD023')
+    }
+    const Instagram  = ()=>{
+        window.open('https://www.instagram.com/cgad.guinebissau/')
+    }
+    const Youtube  = ()=>{
+        window.open('https://www.youtube.com/channel/UC4EVIQIRd8IZoKDRlOZm18Q')
+    }
     
   return (
     <div className='Contato'>
@@ -88,13 +101,13 @@ export default function Contato() {
             <div className="RedContent">
                 <div className="TitleFacebookRed">ESTAMOS NA REDE:</div>
                 <div className="midiasSociasRed">
-                    <i className="fa-brands fa-square-facebook iconsocRed"></i>
+                    <i className="fa-brands fa-square-facebook iconsocRed" onClick={Facebook}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-twitter iconsocRed"></i>
+                    <i className="fa-brands fa-twitter iconsocRed" onClick={Twitter}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-square-instagram iconsocRed"></i>
+                    <i className="fa-brands fa-square-instagram iconsocRed" onClick={Instagram}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-youtube iconsocRed"></i>
+                    <i className="fa-brands fa-youtube iconsocRed" onClick={Youtube}></i>
                 </div>
                 <div className="divTextRed">
                 Através das nossas redes sociais, pode encontrar também as nossas publicações diárias e interagir connosco de forma instantânea.
