@@ -72,13 +72,13 @@
 .manual-btn:hover{
     background: var(--verde);
 }
-#radio1:checked ~ .first{
+#radio1:aria-checked ~ .first{
     margin-left: 0;
 }
-#radio2:checked ~ .first{
+#radio2:aria-checked ~ .first{
     margin-left: -20%;
 }
-#radio3:checked ~ .first{
+#radio3:aria-checked ~ .first{
     margin-left: -40%;
 }
 #radio4:checked ~ .first{
@@ -167,3 +167,61 @@
     background: var(--verde);
 }
 /* ===================slider ====================*/
+@media (max-width: 550px){
+    .slider{
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 500%;
+        height: 400px;
+        display: flex;
+    }
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 360px;
+    }
+    .buttonGo-manual{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: -250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .ButtonBack{
+        width: 50px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .vazioButtonH{
+        height: 40px;
+        width: 5px;
+        border-radius: 10px;
+        background-color: var(--verde);
+    }
+    .imgContentVida{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        box-sizing: border-box;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

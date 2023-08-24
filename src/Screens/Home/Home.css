@@ -258,6 +258,7 @@
 }
 .imgHistory{
     width: 100%;
+    height: 350px;
     object-fit:fill;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -405,6 +406,12 @@
     }
     .pCardObj{
         text-align:justify;
+    }
+}
+@media (max-width: 550px){
+    .textContentIntrodaction{
+        margin-top: -70px;
+        padding: 0px  0px;
     }
 }
 @media (max-width: 500px){

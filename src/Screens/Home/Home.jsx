@@ -79,9 +79,9 @@ export default function Home() {
               </div>
               <div className="centerBissau"></div>
               <div className="rightBissau">
-                <p className="ogadText">OGAD</p>
-                <p className="textDescOGAD">Observatório Guineense </p>
-                <p className="textDescOGAD">sobre álcool e outras drogas...</p>
+                <p className="ogadText">CGAD</p>
+                <p className="textDescOGAD">CENTRO DE PESQUISA GUINEENSE</p>
+                <p className="textDescOGAD">EM ÁLCOOL E OUTRAS DROGAS</p>
               </div>
             </div>
           </div>
@@ -90,19 +90,19 @@ export default function Home() {
       <div className="fullHistory">
         <div className="contentHistory">
           <div className="imageHistory">
-            <img src="./flag.jfif" alt="" className="imgHistory" />
+            <img src="./monu.jpeg" alt="" className="imgHistory" />
           </div>
           <div className="textHistor">
-            <div className="titleHistory">História de OGAD</div>
+            <div className="titleHistory">História do CGAD</div>
             <p className="textPHistory">
-              O Observatório Guineense sobre Droga e outras Drogas (OGAD),
+              O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD),
               é uma organização de iniciativa privada
               fundada em 2020, que visa acompanhar e relatar casos de
               consumo de droga de cidadãos guineenses na Guine-Bissaue 
               e nas Diásporas Guineense no mundo Todo.
             </p>
             <Link to='/sobre'>
-              <button className="buttonHistory">Sobre OGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>
+              <button className="buttonHistory">Sobre CGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>
             </Link>
           </div>
         </div>

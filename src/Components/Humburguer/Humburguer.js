@@ -15,7 +15,7 @@ export default function Humburguer() {
     <div className='Humburguer'>
         <div className="topnav">
             <a href="#home" className="active">
-                <img src='./logof.png' alt='' className='ImgHumburguer' />
+                <img src='./cgadt.png' alt='' className='ImgHumburguer' />
             </a>
             <div  className="icon" onClick={myFunction}>
                 <i className="fa-solid fa-bars iall"></i>

@@ -6,7 +6,7 @@ export default function Footer() {
     <div className='Footer'>
       <div className="contenFooter">
         <div className="empityFooter"></div>
-        <div className="textFooter">Copyright © 2023 OGAD | Created by <i className='DevName'>African-Coder</i></div>
+        <div className="textFooter">Copyright © 2023 CGAD | Created by <i className='DevName'>African-Coder</i></div>
         <div className="buttonFooter"><i className="fa-solid fa-circle-chevron-up VoltarArrow"></i></div>
       </div>
     </div>
