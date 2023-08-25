@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Header from '../../Components/Header/Header'
 import Menu from '../../Components/Menu/Menu'
@@ -8,7 +8,50 @@ import Humburguer from '../../Components/Humburguer/Humburguer'
 import { Link } from 'react-router-dom'
 import Slide from '../../Components/Slide/Slide'
 
+
+const data = [
+  {
+      id:"1",
+      img:"./cgad.jpeg",
+      title:"MISSÃO",
+      desc:"",
+      obj:"Empreender discussões científicas sobre o consumo de álcool e outras drogas em Guiné-Bissau, que possam direcionar as políticas públicas de enfrentamento, prevenção e cuidado/acolhimento, e consequentemente melhorar condições de vida das pessoas nas suas respectivas comunidades.",
+      slg:""
+  },
+  {
+      id:"2",
+      img:"././cgad.jpeg",
+      title:"VISÃO",
+      desc:"",
+      obj:"Ser um centro de estudo e pesquisa que dialoga com as comunidades em vulnerabilidades sociais, com maior incidência sobre consumo de álcool e outras substâncias.",
+      slg:""
+  },
+  {
+      id:"3",
+      img:"./cgad.jpeg",
+      title:"VALORES",
+      desc:"",
+      obj:"Pessoas em primeiro lugar, a nossa existência depende da existência do outro.",
+      slg:""
+  }
+  
+]
+
 export default function Home() {
+  const [pro, setPro] = useState()
+    const [show, setShow] = useState(" ")
+    useEffect(()=>{
+        setPro(data)
+    }, [])
+
+  const verify = (id)=>{
+    if(show === id){
+        setShow(" ")
+    }else{
+        setShow(id)
+    }
+}
+
   return (
     <div className='Home'>
       <Header />
@@ -29,12 +72,37 @@ export default function Home() {
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">
-          O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD) idealizado pelo estudante Ivanilson Dinis Geraldo Monteiro
+          O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD), idealizado pelo estudante Ivanilson Dinis Geraldo Monteiro
           em colaboração com o Núcleo de Pesquisa em Saúde e uso de Substrâncias (NEPSIS).
           </h1>
         </div>
       </div>
-      <div className="fulltextIntrudation">
+      <div className="fullProjectsSecund">
+            <div className="oitentaProjectsSecund">
+                {pro?.map((d)=>(
+                    <div className="cardProjectsSecund" key={d.id}>
+                        <div className="imageProjectSecurd">
+                            <img src={d.img} alt="" className="imgProjectSecund" />
+                        </div>
+                        <div className="textProjectsSecund">
+                            <div className="TitleProjectsSecund">{d.title}</div>
+                            <div className="descriptionProjectsSecund"></div>
+                        </div>
+                        <div className="buttonProjectsSecund">
+                            <i className="fa-solid fa-circle-arrow-down arrowSizee" onClick={()=>verify(d.id)}></i>
+                        </div>
+                        {show === d.id && (
+                            <div id="buttomCardSecund" className={d.id}>
+                                <div className="org"></div>
+                                <div className="ObjCard"><b> </b>{d.obj}</div>
+                                <div className="ObjCard"><b> </b>{d.slg}</div>
+                            </div>
+                        )}
+                    </div>   
+                ))}
+            </div>
+        </div>
+      {/* <div className="fulltextIntrudation">
         <div className="textContentIntrodactionFull">
           
           <div className="cardObjectivos">
@@ -65,7 +133,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="imagemContent">
         <div className="backImgContentBissau">
           <div className="colorBackBissau">
