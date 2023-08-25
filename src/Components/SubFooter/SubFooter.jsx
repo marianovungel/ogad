@@ -2,6 +2,28 @@ import React from 'react'
 import './SubFooter.css'
 
 export default function SubFooter() {
+
+  const Facebook  = ()=>{
+    window.open('https://www.facebook.com/profile.php?id=61550249258004')
+  }
+  const Twitter  = ()=>{
+      window.open('https://twitter.com/CGAD023')
+  }
+  const Instagram  = ()=>{
+      window.open('https://www.instagram.com/cgad.guinebissau/')
+  }
+  const Youtube  = ()=>{
+      window.open('https://www.youtube.com/channel/UC4EVIQIRd8IZoKDRlOZm18Q')
+  }
+  const Noticia = ()=>{
+    window.location.replace("/atualidade");
+  }
+  const Historia = ()=>{
+    window.location.replace("/sobre");
+  }
+  const Home = ()=>{
+    window.location.replace("/");
+  }
   return (
     <div className='SubFooter'>
       <div className="subFooterContent">
@@ -12,30 +34,25 @@ export default function SubFooter() {
             <div className="quem">
                 <div className="quemTitle">Quem Somos Nós</div>
                 <div className="quemItemContem">
-                    <p className="itemQuem">Visão</p>
-                    <p className="itemQuem">Missão</p>
-                    <p className="itemQuem">História da OGAD</p>
-                    <p className="itemQuem">Valores e Princípios</p>
-                    <p className="itemQuem">Projectos</p>
-                    <p className="itemQuem">Equipa</p>
+                    <p className="itemQuem" onClick={Historia}>História do OGAD</p>
+                    <p className="itemQuem" onClick={Home}>Missão</p>
+                    <p className="itemQuem" onClick={Home}>Visão</p>
+                    <p className="itemQuem" onClick={Home}>Valores</p>
                 </div>
             </div>
             <div className="quem">
                 <div className="quemTitle">Atualidade</div>
                 <div className="quemItemContem">
-                    <p className="itemQuem">Notícias</p>
-                    <p className="itemQuem">Anúncios</p>
-                    <p className="itemQuem">Publicações</p>
-                    <p className="itemQuem">Podcast</p>
+                    <p className="itemQuem" onClick={Noticia}>Notícias</p>
                 </div>
             </div>
             <div className="quem">
                 <div className="quemTitle">Redes Sociais</div>
                 <div className="quemItemContem">
-                    <p className="itemQuem">Facebook</p>
-                    <p className="itemQuem">Twitter</p>
-                    <p className="itemQuem">Instagram</p>
-                    <p className="itemQuem">YouTube</p>
+                    <p className="itemQuem" onClick={Facebook}>Facebook</p>
+                    <p className="itemQuem" onClick={Twitter}>Twitter</p>
+                    <p className="itemQuem" onClick={Instagram}>Instagram</p>
+                    <p className="itemQuem" onClick={Youtube}>YouTube</p>
                 </div>
             </div>
 

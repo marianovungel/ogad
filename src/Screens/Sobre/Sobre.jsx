@@ -7,6 +7,11 @@ import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
 
 export default function Sobre() {
+
+    const Ivanilson  = ()=>{
+        window.open('http://lattes.cnpq.br/2236991952896513')
+    }
+
   return (
     <div className='Sobre'>
         <Header />
@@ -47,17 +52,18 @@ export default function Sobre() {
             <div className="oitentaNossa">
                 <div className="TitleNossa">Nossa história</div>
                 <p className="paragrafoNossa">
-                    A Tiniguena é uma organização não governamental guineense fundada em 1991, que visa promover o desenvolvimento participativo e durável, baseado na conservação dos recursos naturais e culturais e no exercício da cidadania.
+                A Guiné-Bissau é uma nação do continente africano composta por uma exuberante multiplicidade étnica, com cerca de trinta grupos étnicos. Cada nação étnica contém a sua própria língua e a forma de enxergar o mundo. São essas singularidades que deixam o povo Bissau-guineense mais alegre, carismático e hospitaleiro. O país tomou a sua independência unilateralmente em 1973 e, de lá para cá, a sua história política/burocrática vem sendo marcada por cíclicas instabilidades políticas, levando o Estado a enfrentar vários problemas em diferentes áreas, como: educação, saúde e saneamento básico, dentre outros. Dito isso, a escassez de políticas públicas, em diferentes áreas, pode ser associada ao consumo problemático de álcool e outras drogas em Guiné-Bissau, principalmente em população mais jovem.
                 </p>
                 <p className="paragrafoNossa">
-                    A organização tem como foco as questões ambientais, contando com uma abordagem consolidada em vários domínios incluindo a soberania, segurança alimentar e nutricional, a animação, organização e mobilização comunitária, a influencia de políticas públicas, a gestão durável de espaços recursos naturais e culturais, e capacitação feminina.
+                Nesse sentido, o Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD) visa ser uma entidade de estudo e pesquisa que discutirá sobre o consumo de álcool e outras drogas, a partir das perspectivas biopsicossociais, ou seja, sem moralismo e/ou amedrontamento.  São objetivos do CGAD: (1) realizar estudos e pesquisas sobre o consumo de álcool e outras drogas em Guiné-Bissau; (2) analisar os contextos de consumo de substâncias; (3) conhecer os problemas associados ao consumo de álcool e outras drogas em Guiné-Bissau; (4) propor políticas públicas sobre prevenção e cuidado e (5) monitorar políticas públicas sobre o enfrentamento do consumo álcool e outras drogas em Guiné-Bissau e traçar uma comparação com outros países da CPLP-Comunidade dos Países de Língua Portuguesa.
                 </p>
                 <p className="paragrafoNossa">
-                    A Tiniguena é uma referência ao nível nacional nas questões ambientais, tendo contribuído para o despertar de uma consciência ambiental crescente junto do público nacional, para o maior interesse dos guineenses pelas questões da biodiversidade e dos saberes associados, para o aumento da procura e consumo dos produtos locais oriundos da biodiversidade e para o desenvolvimento de iniciativas portadoras de esperança em termos de promoção da soberania alimentar, da dinamização da economia local, da melhoria do quadro de vida das populações, através da apropriação, da valorização e da governação responsável dos espaços e recursos naturais pelas comunidades locais.
+                    O CGAD nasce através de experiências acadêmicas no NEPSIS- Núcleo de Pesquisa em Saúde e Uso de Substância, desde 2018 fomentando a ideia de criar uma entidade que propusesse discutir sobre os principais problemas associados ao consumo problemático de álcool e outras drogas em Guiné-Bissau. Uma discussão que levasse em conta as singularidades dos sujeitos, as particularidades que cada contexto apresenta, associado ao uso de substâncias. Entretanto, no decorrer dos anos, foram longos diálogos/encontros/troca de experiências com pesquisadores do NEPSIS, no sentido de eles conhecerem melhor o contexto guineense sobre o consumo de drogas e assim pensar nas propostas sobre intervenções.
                 </p>
                 <p className="paragrafoNossa">
-                    O apoio prestado ao processo de criação e governação participativa da Área Marinha Protegida Comunitária das Ilhas Urok e o investimento na Geração Nova da Tiniguena (GNT) um espaço de aprendizagem para os jovens, constitui um exemplo desta abordagem, fecunda em ensinamentos e que tem vindo a expandir-se no país e na sub-região.
+                Nessas conversas, sempre surgiram reflexões importantes. Reflexões essas que muitas vezes foram expressas em forma de perguntas: (1) quais são os principais problemas atrelados ao consumo de álcool e outras drogas em Guiné-Bissau? (2) como pensar num plano de diagnóstico situacional sobre essa problemática em Guiné-Bissau? (3) como adaptar uma intervenção brasileira, comprovada cientificamente ao contexto guineense? São perguntas que não ficarão restritas aos contextos das nossas conversas, mas sim nortearão todo o trabalho do CGAD em Guiné-Bissau.
                 </p>
+                
             </div>
         </div>
         <div className="membros">
@@ -72,10 +78,10 @@ export default function Sobre() {
                             <img src="./iva.jpeg" alt="" className="imageCardMembro2" />
                             <div className="NameAndCardgoCArdMembro">
                                 <div className="textsMembroCardNome">
-                                    <div className="nomeMembro2">Ivanilson</div>
+                                    <div className="nomeMembro2">Ivanilson Monteiro</div>
                                     <i className="CargoDoMembro2">Fundador</i>
                                 </div>
-                                <button className="cardItemButtonMembro">
+                                <button className="cardItemButtonMembro" onClick={Ivanilson}>
                                     Saiba mais
                                     <i className="fa-solid fa-user-plus paddingIconMembro"></i>
                                 </button>
@@ -85,19 +91,19 @@ export default function Sobre() {
                     </div>
                     <div className="cardMembro2">
                         <div className="imgCardMembro2">
-                            <img src="./mar.jpeg" alt="" className="imageCardMembro2" />
+                            <img src="./cgadt.png" alt="" className="imageCardMembro2" />
                             <div className="NameAndCardgoCArdMembro">
                                 <div className="textsMembroCardNome">
-                                    <div className="nomeMembro2">Mariano Vunge</div>
-                                    <i className="CargoDoMembro2">Desenvolvedor</i>
+                                    <div className="nomeMembro2">Nome</div>
+                                    <i className="CargoDoMembro2">Função</i>
                                 </div>
-                                <button className="cardItemButtonMembro">
+                                <button className="cardItemButtonMembro" >
                                     Saiba mais
                                     <i className="fa-solid fa-user-plus paddingIconMembro"></i>
                                 </button>
                             </div>
                         </div>
-                        <div className="descCArdMembro">Sou Estudante Eng. Computação e desenvolvedor Fulltrack Js...</div>
+                        <div className="descCArdMembro">Breve descrição do Fundador...</div>
                     </div>
                     
                 </div>

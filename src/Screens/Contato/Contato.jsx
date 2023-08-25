@@ -86,14 +86,14 @@ export default function Contato() {
                         <i className="fa-solid fa-mobile-screen-button sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">Telefones</div>
-                            <div className="EnderecoItemTellRed">(+245)  955 489 766 | 966 735 111</div>
+                            <div className="EnderecoItemTellRed"> </div>
                         </div>
                     </div>
                     <div className="descItemTelRed">
                         <i className="fa-regular fa-envelope sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">E-mail</div>
-                            <div className="EnderecoItemTellRed">cgadguinebissau@gmail.com | ivannildo@gmail.com</div>
+                            <div className="EnderecoItemTellRed">cgadguinebissau@gmail.com</div>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Contato() {
                     <i className="fa-brands fa-youtube iconsocRed" onClick={Youtube}></i>
                 </div>
                 <div className="divTextRed">
-                Através das nossas redes sociais, pode encontrar também as nossas publicações diárias e interagir connosco de forma instantânea.
+                    Para mais informações, visite as nossas redes sociais...
                 </div>
             </div>
         </div>

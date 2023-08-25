@@ -29,30 +29,21 @@ export default function Home() {
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">
-            Organização Guineense operando a mais de 3 anos
-            desde a sua fundação no ano de (2020) com o intuito de relatar e acompanhas os casos
-            de uso de drogras...
+          O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD) idealizado pelo estudante Ivanilson Dinis Geraldo Monteiro
+          em colaboração com o Núcleo de Pesquisa em Saúde e uso de Substrâncias (NEPSIS).
           </h1>
         </div>
       </div>
       <div className="fulltextIntrudation">
         <div className="textContentIntrodactionFull">
-          <div className="cardObjectivos">
-            <div className="imagemCardObj">
-              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
-            </div>
-            <div className="textCArdObj">
-              <div className="titleCardObj">VISÃO</div>
-              <div className="pCardObj">Uma terra rica em recursos naturais e culturais para o bem-estar das gerações presentes e futuras</div>
-            </div>
-          </div>
+          
           <div className="cardObjectivos">
             <div className="imagemCardObj">
               <img src="./cgad.jpeg" alt="" className="imgCardObj" />
             </div>
             <div className="textCArdObj">
               <div className="titleCardObj">MISSÃO</div>
-              <div className="pCardObj">Promover um desenvolvimento participativo e durável, baseado na conservação dos recursos naturais e culturais e no exercício da cidadania</div>
+              <div className="pCardObj">Empreender discussões científicas sobre o consumo de álcool e outras drogas em Guiné-Bissau, que possam direcionar as políticas públicas de enfrentamento, prevenção e cuidado/acolhimento, e consequentemente melhorar condições de vida das pessoas nas suas respectivas comunidades.</div>
             </div>
           </div>
           <div className="cardObjectivos">
@@ -60,8 +51,17 @@ export default function Home() {
               <img src="./cgad.jpeg" alt="" className="imgCardObj" />
             </div>
             <div className="textCArdObj">
-              <div className="titleCardObj">VALORES E PRINCÍPIOS</div>
-              <div className="pCardObj">A Tiniguena considera que as suas acções e organização interna são baseadas em certos grandes valores universais que são partilhados...</div>
+              <div className="titleCardObj">VISÃO</div>
+              <div className="pCardObj">Ser um centro de estudo e pesquisa que dialoga com as comunidades em vulnerabilidades sociais, com maior incidência sobre consumo de álcool e outras substâncias.</div>
+            </div>
+          </div>
+          <div className="cardObjectivos">
+            <div className="imagemCardObj">
+              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
+            </div>
+            <div className="textCArdObj">
+              <div className="titleCardObj">VALORES</div>
+              <div className="pCardObj">Pessoas em primeiro lugar, a nossa existência depende da existência do outro.</div>
             </div>
           </div>
         </div>
@@ -95,11 +95,7 @@ export default function Home() {
           <div className="textHistor">
             <div className="titleHistory">História do CGAD</div>
             <p className="textPHistory">
-              O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD),
-              é uma organização de iniciativa privada
-              fundada em 2020, que visa acompanhar e relatar casos de
-              consumo de droga de cidadãos guineenses na Guine-Bissaue 
-              e nas Diásporas Guineense no mundo Todo.
+            O CGAD nasce através de experiências acadêmicas no NEPSIS- Núcleo de Pesquisa em Saúde e Uso de Substância, desde 2018 fomentando a ideia de criar uma entidade que propusesse discutir sobre os principais problemas associados ao consumo problemático de álcool e outras drogas em Guiné-Bissau. Uma discussão que levasse em conta as singularidades dos sujeitos, as particularidades que cada contexto apresenta, associado ao uso de substâncias. Entretanto, no decorrer dos anos, foram longos diálogos/encontros/troca de experiências com pesquisadores do NEPSIS, no sentido de eles conhecerem melhor o contexto guineense sobre o consumo de drogas e assim pensar nas propostas sobre intervenções.
             </p>
             <Link to='/sobre'>
               <button className="buttonHistory">Sobre CGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>

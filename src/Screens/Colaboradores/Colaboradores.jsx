@@ -8,35 +8,11 @@ import Footer from '../../Components/Footer/Footer'
 
 const data = [
     {
-        id:"1",
-        ordem:1,
-        title:"USP",
-        desc:"A Universidade federal de São Paulo vem contibuindo de forma intensiva  no projeto. Destafeita o projeto vai avançando com o decorrer do tempo."
-    },
-    {
         id:"2",
-        ordem:2,
-        title:"UNILAB",
-        desc:"A Universidade federal de São Paulo vem contibuindo de forma intensiva  no projeto. Destafeita o projeto vai avançando com o decorrer do tempo."
-    },
-    {
-        id:"3",
-        ordem:3,
-        title:"UFC",
-        desc:"A Universidade federal de São Paulo vem contibuindo de forma intensiva  no projeto. Destafeita o projeto vai avançando com o decorrer do tempo."
-    },
-    {
-        id:"4",
-        ordem:4,
-        title:"USP",
-        desc:"A Universidade federal de São Paulo vem contibuindo de forma intensiva  no projeto. Destafeita o projeto vai avançando com o decorrer do tempo."
-    },
-    {
-        id:"5",
-        ordem:5,
-        title:"Letras UNILAB",
-        desc:"A Universidade federal de São Paulo vem contibuindo de forma intensiva  no projeto. Destafeita o projeto vai avançando com o decorrer do tempo."
-    },
+        ordem:1,
+        title:"Nome",
+        desc:"Descrição dos Parceiros"
+    }
 ]
 
 export default function Colaboradores() {
@@ -69,7 +45,7 @@ export default function Colaboradores() {
                             <div className="descColaPes">{d.desc}</div>
                         </div>
                         <div className="imagemColaboradorPes">
-                            <img src="./droga.jpg" alt="" className="imgColaPes" />
+                            <img src="./cgad.jpeg" alt="" className="imgColaPes" />
                         </div>
                     </div>
                 </div>
