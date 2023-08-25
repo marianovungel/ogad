@@ -87,9 +87,9 @@ export default function Projeto() {
         <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent">NOSSOS TEMAS</h1>
+                    <h1 className="centerFastContent">OS TEMAS QUE SERÃO ESTUDADOS PELO CGAD</h1>
                     <p className="paragradoFastContent">
-                        RESILIÊNCIA INSTITUCIONAL DOS PROCESSOS SOCIOECONÓMICOS E SOCIO-AMBIENTAIS
+                        
                     </p>
                 </div>
             </div>

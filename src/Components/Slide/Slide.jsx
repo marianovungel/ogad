@@ -43,7 +43,7 @@ export default function Slide() {
               <img src="./droga.jpg" alt="" />
             </div>
             <div className="slide">
-              <img src="./droga1.jpg" alt="" />
+              <img src="./ndg.jpg" alt="" />
             </div>            
             <div className="slide">
               <img src="./droga2.jpg" alt="" />
