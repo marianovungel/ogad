@@ -5,21 +5,28 @@ import Menu from '../../Components/Menu/Menu'
 import Humburguer from '../../Components/Humburguer/Humburguer'
 import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
+import api from '../../AdmScreens/api'
 
-const data = [
-    {
-        id:"2",
-        ordem:1,
-        title:"Nome",
-        desc:"Descrição dos Parceiros"
-    }
-]
 
 export default function Colaboradores() {
-    const [db, setDb] = useState(data)
+    const [db, setDb] = useState([])
+    
+    const getData = async()=>{
+        try {
+            var {data} = await api.get("/parceiros")
+            var res = data
+            for(var x = 0; x < data.length; x++){
+                data[x] = {...res[x], ordem:x}
+            }
+            setDb(data)
+        } catch (error) {}
+    }
+
+    
     useEffect(()=>{
-        setDb(data)
+        getData()
     }, [])
+
   return (
     <div className='Colaboradores'>
         <Header />
@@ -36,8 +43,8 @@ export default function Colaboradores() {
             </div>
         </div>
         <div className="TitlePesquisadores">Parceiros</div>
-        {db.map((d)=>(
-            <div className={ d.ordem % 2 === 0 ? "pesquisawhite" : "pesquisadores" } key={d.id}>
+        {db?.map((d)=>(
+            <div className={ d.ordem % 2 === 0 ? "pesquisadores newAlingCardPar" : "pesquisawhite newAlingCardPar" } key={d._id}>
                 <div className="oitentaPesquisadores">
                     <div className={ d.ordem % 2 === 0 ? "cardColaboradores":"cardColaboradoresWhite"}>
                         <div className="descColaboradorPes">
@@ -45,11 +52,11 @@ export default function Colaboradores() {
                             <div className="descColaPes">{d.desc}</div>
                         </div>
                         <div className="imagemColaboradorPes">
-                            <img src="./cgad.jpeg" alt="" className="imgColaPes" />
+                            <img src={d.img} alt="" className="imgColaPes" />
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
 
         ))}
         <SubFooter />

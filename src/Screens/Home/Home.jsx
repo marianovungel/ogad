@@ -6,43 +6,66 @@ import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
 import Humburguer from '../../Components/Humburguer/Humburguer'
 import { Link } from 'react-router-dom'
-import Slide from '../../Components/Slide/Slide'
+// import Slide from '../../Components/Slide/Slide'
+import api from '../../AdmScreens/api'
+import SlideShow from '../../Components/GPT/GPT'
 
-
-const data = [
-  {
-      id:"1",
-      img:"./cgad.jpeg",
-      title:"MISSÃO",
-      desc:"",
-      obj:"Empreender discussões científicas sobre o consumo de álcool e outras drogas em Guiné-Bissau, que possam direcionar as políticas públicas de enfrentamento, prevenção e cuidado/acolhimento, e consequentemente melhorar condições de vida das pessoas nas suas respectivas comunidades.",
-      slg:""
-  },
-  {
-      id:"2",
-      img:"././cgad.jpeg",
-      title:"VISÃO",
-      desc:"",
-      obj:"Ser um centro de estudo e pesquisa que dialoga com as comunidades em vulnerabilidades sociais, com maior incidência sobre consumo de álcool e outras substâncias.",
-      slg:""
-  },
-  {
-      id:"3",
-      img:"./cgad.jpeg",
-      title:"VALORES",
-      desc:"",
-      obj:"Pessoas em primeiro lugar, a nossa existência depende da existência do outro.",
-      slg:""
-  }
-  
-]
+var slides = []
+var linkId = []
 
 export default function Home() {
-  const [pro, setPro] = useState()
+    const [pro, setPro] = useState()
     const [show, setShow] = useState(" ")
-    useEffect(()=>{
-        setPro(data)
-    }, [])
+    const [header, setHeader] = useState(" ")
+    const [text, setText] = useState(" ")
+    
+
+    const getData = async()=>{
+      try {
+          const {data} = await api.get("/home")
+          const response = await api.get("/sobre")
+          const getImgs = await api.get("/atual")
+
+          for(let x = 0; x < 3; x++){
+            slides[x] = getImgs.data[x].img
+            linkId[x] = getImgs.data[x]._id
+          }
+
+
+          setText(response.data[2].history)
+          setHeader(data[0].header)
+
+          const BigRes = [
+              {
+                  id:"1",
+                  img:data[0].imissao,
+                  title:"MISSÃO",
+                  obj:data[0].missao
+              },
+              {
+                  id:"2",
+                  img:data[0].ivisao,
+                  title:"VISÃO",
+                  obj:data[0].visao
+              },
+              {
+                  id:"3",
+                  img:data[0].ivalor,
+                  title:"VALORES",
+                  obj:data[0].valor
+              }
+          ]
+          setPro(BigRes)
+
+      } catch (error) {
+          console.log(error)
+      }
+  }
+
+  
+  useEffect(()=>{
+      getData()
+  }, [])
 
   const verify = (id)=>{
     if(show === id){
@@ -52,28 +75,18 @@ export default function Home() {
     }
 }
 
+
   return (
     <div className='Home'>
       <Header />
       <Humburguer />
       <Menu select={"inicio"} />
-      {/* <div className="imagemContent">
-        <div className="backImgContent">
-          <div className="colorBack">
-            <div className="textBack">
-              <p className="ogadText">OGAD</p>
-              <p className="textDescOGAD">Observatório Guineense </p>
-              <p className="textDescOGAD">sobre álcool e outras drogas...</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <Slide />
+      {/* <Slide /> */}
+      <SlideShow slides={slides} linkId={linkId}  />
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">
-          O Centro de Pesquisa Guineense em Álcool e outras Drogas (CGAD), idealizado pelo estudante Ivanilson Dinis Geraldo Monteiro
-          em colaboração com o Núcleo de Pesquisa em Saúde e uso de Substrâncias (NEPSIS).
+            {header}
           </h1>
         </div>
       </div>
@@ -95,45 +108,14 @@ export default function Home() {
                             <div id="buttomCardSecund" className={d.id}>
                                 <div className="org"></div>
                                 <div className="ObjCard"><b> </b>{d.obj}</div>
-                                <div className="ObjCard"><b> </b>{d.slg}</div>
+                                {/* <div className="ObjCard"><b> </b>{d.slg}</div> */}
                             </div>
                         )}
                     </div>   
                 ))}
             </div>
         </div>
-      {/* <div className="fulltextIntrudation">
-        <div className="textContentIntrodactionFull">
-          
-          <div className="cardObjectivos">
-            <div className="imagemCardObj">
-              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
-            </div>
-            <div className="textCArdObj">
-              <div className="titleCardObj">MISSÃO</div>
-              <div className="pCardObj">Empreender discussões científicas sobre o consumo de álcool e outras drogas em Guiné-Bissau, que possam direcionar as políticas públicas de enfrentamento, prevenção e cuidado/acolhimento, e consequentemente melhorar condições de vida das pessoas nas suas respectivas comunidades.</div>
-            </div>
-          </div>
-          <div className="cardObjectivos">
-            <div className="imagemCardObj">
-              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
-            </div>
-            <div className="textCArdObj">
-              <div className="titleCardObj">VISÃO</div>
-              <div className="pCardObj">Ser um centro de estudo e pesquisa que dialoga com as comunidades em vulnerabilidades sociais, com maior incidência sobre consumo de álcool e outras substâncias.</div>
-            </div>
-          </div>
-          <div className="cardObjectivos">
-            <div className="imagemCardObj">
-              <img src="./cgad.jpeg" alt="" className="imgCardObj" />
-            </div>
-            <div className="textCArdObj">
-              <div className="titleCardObj">VALORES</div>
-              <div className="pCardObj">Pessoas em primeiro lugar, a nossa existência depende da existência do outro.</div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      
       <div className="imagemContent">
         <div className="backImgContentBissau">
           <div className="colorBackBissau">
@@ -163,7 +145,7 @@ export default function Home() {
           <div className="textHistor">
             <div className="titleHistory">História do CGAD</div>
             <p className="textPHistory">
-            O CGAD nasce através de experiências acadêmicas no NEPSIS- Núcleo de Pesquisa em Saúde e Uso de Substância, desde 2018 fomentando a ideia de criar uma entidade que propusesse discutir sobre os principais problemas associados ao consumo problemático de álcool e outras drogas em Guiné-Bissau. Uma discussão que levasse em conta as singularidades dos sujeitos, as particularidades que cada contexto apresenta, associado ao uso de substâncias. Entretanto, no decorrer dos anos, foram longos diálogos/encontros/troca de experiências com pesquisadores do NEPSIS, no sentido de eles conhecerem melhor o contexto guineense sobre o consumo de drogas e assim pensar nas propostas sobre intervenções.
+              {text}
             </p>
             <Link to='/sobre'>
               <button className="buttonHistory">Sobre CGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>

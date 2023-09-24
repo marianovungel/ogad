@@ -6,7 +6,7 @@ export default function Slide() {
 
 
       setInterval(function(){
-          document.getElementById('radio' + counter).checked = true;
+          document.getElementById('radio' + counter);
           counter++;
           if(counter > 4){
               counter = 1;

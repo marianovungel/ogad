@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './Contato.css'
@@ -9,10 +9,24 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Swal from 'sweetalert2';
 import SubFooter from '../../Components/SubFooter/SubFooter';
 import Footer from '../../Components/Footer/Footer';
+import api from '../../AdmScreens/api';
 
 export default function Contato() {
+    const [contact, setContact] = useState({})
     const  [status, setStatus] = useState(false)
     const form = useRef();
+
+    const getData = async ()=>{
+        try {
+            const ress = await api.get("/contato")
+            setContact(ress.data[0])
+        } catch (error) {}
+    }
+
+    
+    useEffect(()=>{
+        getData()
+    }, [])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -42,17 +56,9 @@ export default function Contato() {
         }
     }
 
-    const Facebook  = ()=>{
-        window.open('https://www.facebook.com/profile.php?id=61550249258004')
-    }
-    const Twitter  = ()=>{
-        window.open('https://twitter.com/CGAD023')
-    }
-    const Instagram  = ()=>{
-        window.open('https://www.instagram.com/cgad.guinebissau/')
-    }
-    const Youtube  = ()=>{
-        window.open('https://www.youtube.com/channel/UC4EVIQIRd8IZoKDRlOZm18Q')
+    const Facebook  = (data)=>{
+        console.log(data)
+        window.open(`${data}`)
     }
     
   return (
@@ -60,16 +66,6 @@ export default function Contato() {
       <Header />
       <Menu />
       <Humburguer />
-      <div className="fullContentFast">
-            <div className="colorFastContent">
-                <div className="oitentaFastContent">
-                    <h1 className="centerFastContent" id='newSizeTitle'>Seu Contacto é importante</h1>
-                    <p className="paragradoFastContent" id='newSizeP'>
-                        O seu Parecer é importante para melhorar os nossos Serviços
-                    </p>
-                </div>
-            </div>
-        </div>
       <div className="contactosContentPage">
         <div className="fullRed">
             <div className="telContent">
@@ -79,21 +75,21 @@ export default function Contato() {
                         <i className="fa-solid fa-location-dot sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">Endereço</div>
-                            <div className="EnderecoItemTellRed">Fortaleza/Redenção-CE</div>
+                            <div className="EnderecoItemTellRed">{contact.endereco}</div>
                         </div>
                     </div>
                     <div className="descItemTelRed">
                         <i className="fa-solid fa-mobile-screen-button sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">Telefones</div>
-                            <div className="EnderecoItemTellRed"> </div>
+                            <div className="EnderecoItemTellRed">{contact.cell}</div>
                         </div>
                     </div>
                     <div className="descItemTelRed">
                         <i className="fa-regular fa-envelope sizeRedIcon"></i>
                         <div className="descTitleRedTell">
                             <div className="TitleTelItemRed">E-mail</div>
-                            <div className="EnderecoItemTellRed">cgadguinebissau@gmail.com</div>
+                            <div className="EnderecoItemTellRed">{contact.email}</div>
                         </div>
                     </div>
                 </div>
@@ -101,13 +97,13 @@ export default function Contato() {
             <div className="RedContent">
                 <div className="TitleFacebookRed">ESTAMOS NA REDE:</div>
                 <div className="midiasSociasRed">
-                    <i className="fa-brands fa-square-facebook iconsocRed" onClick={Facebook}></i>
+                    <i className="fa-brands fa-square-facebook iconsocRed" onClick={()=>Facebook(contact.facebook)}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-twitter iconsocRed" onClick={Twitter}></i>
+                    <i className="fa-brands fa-twitter iconsocRed" onClick={()=>Facebook(contact.twitter)}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-square-instagram iconsocRed" onClick={Instagram}></i>
+                    <i className="fa-brands fa-square-instagram iconsocRed" onClick={()=>Facebook(contact.instagram)}></i>
                     <div className="tracoRed"></div>
-                    <i className="fa-brands fa-youtube iconsocRed" onClick={Youtube}></i>
+                    <i className="fa-brands fa-youtube iconsocRed" onClick={()=>Facebook(contact.youtube)}></i>
                 </div>
                 <div className="divTextRed">
                     Para mais informações, visite as nossas redes sociais...
