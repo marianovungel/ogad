@@ -45,7 +45,7 @@ class SlideShow extends Component {
     return (
       <div className="contDivPencepal">
         <div className="slide-show" onClick={()=>getSlide(currentSlide)}>
-          <img src={slides[currentSlide]} alt={`Carregando...`} className='imgCardSlideNovo' />
+          <img src={slides[currentSlide] ? slides[currentSlide] : "https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png"} alt={`Carregando...`} className='imgCardSlideNovo' />
           {/* <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className='imgCardSlideNovo' /> */}
         </div>
         <button className="butGoSlide" onClick={this.nextSlide}>Próximo</button>

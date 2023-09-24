@@ -32,7 +32,9 @@
     border: none;
     border-radius: 0px 5px 5px 0px;
     box-shadow: 1px 1px 7px 1px var(--verdeC);
-    background-color: var(--verdeE);
+    background-color: var(--verde);
+    color: #fff;
+    font-weight: 600;
   }
   .butGoSlideb{
     display: block;
@@ -43,7 +45,9 @@
     border: none;
     border-radius: 5px 0px 0px 5px;
     box-shadow: 1px 1px 7px 1px var(--verdeC);
-    background-color: var(--verdeE);
+    background-color: var(--verde);
+    color: #fff;
+    font-weight: 600;
   }
   
   .slide-container {

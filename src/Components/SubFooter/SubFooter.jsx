@@ -1,7 +1,7 @@
 import React from 'react'
 import './SubFooter.css'
 
-export default function SubFooter() {
+export default function SubFooter(data) {
 
   const Facebook  = ()=>{
     window.open('https://www.facebook.com/profile.php?id=61550249258004')
@@ -28,7 +28,7 @@ export default function SubFooter() {
     <div className='SubFooter'>
       <div className="subFooterContent">
         <div className="imageSubFooter">
-            <img src="./cgadf.png" alt="" className="imgSubFooter" />
+            {data ? <img src="../cgadf.png" alt="" className="imgSubFooter" /> : <img src="./cgadf.png" alt="" className="imgSubFooter" /> }
         </div>
         <div className="allSubFooter">
             <div className="quem">

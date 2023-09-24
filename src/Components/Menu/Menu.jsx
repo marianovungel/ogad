@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Menu.css'
 import { Link } from 'react-router-dom'
 
-export default function Menu({select}) {
+export default function Menu({select, data}) {
   const [selectItem, setSelectItem] = useState(select)
   useEffect(()=>{
     setSelectItem(selectItem)
@@ -11,7 +11,7 @@ export default function Menu({select}) {
     <div className='Menu'>
       <div className="fullMenu">
         <div className="logoImg">
-            <img src="./cgadt.png" className='logoClass' alt="" />
+        {data ? <img src="../cgadt.png" className='logoClass' alt="" /> : <img src="./cgadt.png" className='logoClass' alt="" />}
             <div className="textTitle">
                 <p className="title">CENTRO DE PESQUISA GUINEENSE</p>
                 <p className="title">EM ÁLCOOL E OUTRAS DROGAS</p>

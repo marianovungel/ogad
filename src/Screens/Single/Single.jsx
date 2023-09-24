@@ -32,7 +32,7 @@ export default function Single() {
   return (
     <div className='fullContSingle'>
         <Header />
-        <Menu />
+        <Menu data={true} />
         <Humburguer />
       <div className="headerSingle">
         <div className="oitentSingleHeader">
@@ -89,8 +89,8 @@ export default function Single() {
             </div>
         </div>
       </div>
-      <SubFooter />
-        <Footer />
+      <SubFooter data={true} />
+      <Footer />
     </div>
   )
 }
