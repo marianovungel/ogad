@@ -78,14 +78,7 @@ export default function Single() {
       <div className="headerSingle">
         <div className="oitentSingleHeaderTextSocialimgT">
             <div className="textSingleText">
-                Os candidatos(as) aprovados no Processo Seletivo de 
-                Estudantes Internacionais (PSEI) da Universidade da 
-                Integração Internacional da Lusofonia Afro-Brasileira,
-                convocados na última segunda-feira (11) para confirmar
-                interesse de matrícula para o semestre letivo 2023.2,
-                devem apresentar a documentação exigida na embaixada
-                brasileira em seu país no período de 18 a 29 de setembro. A exceção se dá para os candidatos de São Tomé e Príncipe, onde a confirmação
-                de interesse de matrícula será de 16 a 20 de outubro.
+                {res.text}
             </div>
         </div>
       </div>

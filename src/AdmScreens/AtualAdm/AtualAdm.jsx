@@ -22,11 +22,13 @@ export default function AtualAdm() {
     const [UserAdm, setUserAdm] = useState(null)
     const [img, setImg] = useState(null)
     const [Title, setTitle] = useState("")
+    const [desc, setDesc] = useState("")
     const [obj, setObj] = useState("")
     const [Banner, setBanner] = useState(false)
     const [imgE, setImgE] = useState(null)
     const [imgEA, setImgEA] = useState(null)
     const [TitleE, setTitleE] = useState(null)
+    const [descE, setDescE] = useState(null)
     const [objE, setObjE] = useState(null)
     const [IdEdit, setIdEdit] = useState(null)
     const [contact, setContact] = useState({})
@@ -70,7 +72,8 @@ export default function AtualAdm() {
                 await api.post("/atual", {
                     title: Title,
                     img:result,
-                    local:obj
+                    local:obj,
+                    text:desc
                 })
                 Swal.fire({
                     position: 'center',
@@ -92,11 +95,13 @@ export default function AtualAdm() {
             setImgE(null)
             setImgEA(null)
             setTitleE(null)
+            setDescE(null)
             setObjE(null)
             setIdEdit(null)
         }else{
             setShow(data._id)
             setTitleE(data.title)
+            setDescE(data.text)
             setObjE(data.obj)
             setIdEdit(data._id)
             setImgEA(data.img)
@@ -116,7 +121,8 @@ export default function AtualAdm() {
             await api.put(`/atual/${IdEdit}`,{
                 img: result ? result : imgEA,
                 title: TitleE,
-                local:objE
+                local:objE,
+                text:descE
             })
             Swal.fire({
                 position: 'center',
@@ -177,6 +183,7 @@ export default function AtualAdm() {
                 {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
                 <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setImg(e.target.files[0])}  />
                 <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setTitle(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Descrição' onChange={(e)=> setDesc(e.target.value)} />
                 <input type="text" className="textFastIn" placeholder='Local do Evento' onChange={(e)=> setObj(e.target.value)} />
                 <div className="divNewLateralButt"><button className="butbtnNeww" onClick={Cadastrar}>Cadastrar...</button></div>
             </div>
@@ -206,6 +213,7 @@ export default function AtualAdm() {
                                             {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
                                             <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setImgE(e.target.files[0])}  />
                                             <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setTitleE(e.target.value)} />
+                                            <input type="text" className="textFastIn" placeholder='Descrição' onChange={(e)=> setDescE(e.target.value)} />
                                             <input type="text" className="textFastIn" placeholder='Local do Evento' onChange={(e)=> setObjE(e.target.value)} />
                                             <div className="divNewLateralButtt"><button className="butbtnNewwTU" onClick={EditFundador}>Salvar Alteração</button></div>
                                         </div>
