@@ -42,15 +42,23 @@ class SlideShow extends Component {
       window.location.replace(`/atualidade/${ArrayLinks[data]}`);
     }
 
+    console.log(slides[currentSlide])
+
     return (
-      <div className="contDivPencepal">
-        <div className="slide-show" onClick={()=>getSlide(currentSlide)}>
-          <img src={slides[currentSlide] ? slides[currentSlide] : "https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png"} alt={`Carregando...`} className='imgCardSlideNovo' />
-          {/* <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className='imgCardSlideNovo' /> */}
-        </div>
-        <button className="butGoSlide" onClick={this.nextSlide}>Próximo</button>
-        <button className="butGoSlideb" onClick={()=>this.nextSlideb(currentSlide)}>Anterior</button>
-      </div>
+      <>
+        {slides[currentSlide] ? (
+          <div className="contDivPencepal">
+            <div className="slide-show" onClick={()=>getSlide(currentSlide)}>
+              <img src={slides[currentSlide] ? slides[currentSlide] : "https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png"} alt={`Carregando...`} className='imgCardSlideNovo' />
+              {/* <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className='imgCardSlideNovo' /> */}
+            </div>
+            <button className="butGoSlide" onClick={this.nextSlide}>Próximo</button>
+            <button className="butGoSlideb" onClick={()=>this.nextSlideb(currentSlide)}>Anterior</button>
+          </div>
+        ):(
+          <div className='carregarText'>Carregando ....</div>
+        )}
+      </>
     );
   }
 }
