@@ -152,7 +152,7 @@
     height: 40px;
     border-radius: 5px;
     border: none;
-    box-shadow: 1px 1px 6px 2px #ddd;
+    box-shadow: 1px 1px 10px 0.1px #ddd;
     padding: 5px 0px;
 }
 .messageFormItem{
@@ -160,7 +160,7 @@
     height: 200px;
     border-radius: 5px;
     border: none;
-    box-shadow: 1px 1px 6px 2px #ddd;
+    box-shadow: 1px 1px 10px 0.1px #ddd;
     padding: 5px 0px;
     max-width: 100%;
     max-height: 200px;
@@ -169,7 +169,7 @@
     width: 100%;
     border-radius: 5px;
     border: none;
-    box-shadow: 1px 1px 6px 2px #ddd;
+    box-shadow: 1px 1px 10px 0.1px #ddd;
     padding: 15px 0px;
 }
 .EmailFormContent{
