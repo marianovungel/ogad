@@ -410,7 +410,7 @@
 }
 @media (max-width: 550px){
     .textContentIntrodaction{
-        margin-top: -70px;
+        /* margin-top: -70px; */
         padding: 0px  0px;
     }
 }
