@@ -24,7 +24,7 @@ export default function MenuAdm({select}) {
             {/* <div className={selectItem==="inicio" ? "selectButton": "itemMenu"}>Início</div> */}
             <Link to='/sobreadm'><div className={selectItem==="2" ? "selectButton": "itemMenu"}>Sobre</div></Link>
             <Link to='/temaadm'><div className={selectItem==="3" ? "selectButton": "itemMenu"}>Temas</div></Link>
-            <Link to='/atualadm'><div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidade</div></Link>
+            <Link to='/atualadm'><div className={selectItem==="4" ? "selectButton": "itemMenu"}>Atualidades</div></Link>
             <Link to='/contatoadm'><div className={selectItem==="5" ? "selectButton": "itemMenu"}>Contato</div></Link>
             <Link to='/parceriasadm'><div className={selectItem==="5" ? "selectButton": "itemMenu"}>Parcerias</div></Link>
         </div>

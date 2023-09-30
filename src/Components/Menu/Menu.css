@@ -38,10 +38,9 @@ a{
     padding: 10px;
 }
 .title{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0px;
     font-weight: 500;
-    font-family: 'Caveat', cursive;
     color: var(--verdeE);
     /* font-family: 'Satisfy'; */
 }

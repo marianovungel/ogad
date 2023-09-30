@@ -10,31 +10,26 @@ import { Link } from 'react-router-dom'
 import api from '../../AdmScreens/api'
 import SlideShow from '../../Components/GPT/GPT'
 
-var slides = []
-var linkId = []
 
+var slides = []
 export default function Home() {
     const [pro, setPro] = useState()
     const [show, setShow] = useState(" ")
     const [header, setHeader] = useState(" ")
     const [text, setText] = useState(" ")
-    
 
+  
+  useEffect(()=>{
     const getData = async()=>{
       try {
           const getImgs = await api.get("/atual")
+          slides=getImgs.data
           
-          for(let x = 0; x < 3; x++){
-            slides[x] = getImgs.data[x].img
-            linkId[x] = getImgs.data[x]._id
-          }
-          console.log([1, slides])
           const {data} = await api.get("/home")
           const response = await api.get("/sobre")
 
           setText(response.data[2].history)
           setHeader(data[0].header)
-          console.log([2, data])
           const BigRes = [
               {
                   id:"1",
@@ -61,10 +56,8 @@ export default function Home() {
           console.log(error)
       }
   }
-
+  getData()
   
-  useEffect(()=>{
-      getData()
   }, [])
 
   const verify = (id)=>{
@@ -82,7 +75,7 @@ export default function Home() {
       <Humburguer />
       <Menu select={"inicio"} />
       {/* <Slide /> */}
-      <SlideShow slides={slides} linkId={linkId}  />
+      <SlideShow slides={slides}  />
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">

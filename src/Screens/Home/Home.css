@@ -190,11 +190,11 @@
     align-items: center;
     justify-content: center;
     border: none;
-    box-shadow: 1px 1px 8px 2px var(--verde);
+    box-shadow: 0.5px 0.5px 3px 0.5px var(--verde);
     cursor: pointer;
 }
 .leftButtonBissau:hover{
-    box-shadow: 1px 1px 8px 2px #ddd;
+    box-shadow: 0.5px 0.5px 3px 0.5px #ddd;
     transition: 0.3s;
 }
 .buttonHistory{
@@ -210,11 +210,11 @@
     align-items: center;
     justify-content: center;
     border: none;
-    box-shadow: 1px 1px 8px 2px var(--verde);
+    box-shadow: 0.5px 0.5px 3px 0.5px var(--verde);
     cursor: pointer;
 }
 .buttonHistory:hover{
-    box-shadow: 1px 1px 8px 2px #999;
+    box-shadow: 0.5px 0.5px 3px 0.5px #999;
     transition: 0.3s;
 }
 .cicleColor{
@@ -262,7 +262,7 @@
     object-fit:fill;
     border-radius: 10px;
     border: 1px solid #ddd;
-    box-shadow: 1px 1px 7px 2px #ddd;
+    box-shadow: 0.5px 0.5px 3px 0.5px #ddd;
 }
 .titleHistory{
     font-size: 2rem;

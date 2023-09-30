@@ -15,9 +15,11 @@
 .imageSubFooter{
     width: 20%;
 }
-.imgSubFooter{
-    height: 280px;
-    border-radius: 50%;
+.imgSubFooterooo{
+    background-color: yellowgreen;
+}
+#iconImgLogoCgad{
+    max-height: 170px;
 }
 .allSubFooter{
     width: 70%;
@@ -53,6 +55,9 @@
     }
 }
 @media (max-width: 900px){
+    #iconImgLogoCgad{
+        max-height: 150px;
+    }
     .quemTitle{
         font-size: 1rem;
     }
@@ -67,6 +72,19 @@
     }
     .subFooterContent{
         width: 93%;
+    }
+    .allSubFooter{
+        width: 78%;
+    }
+}
+@media (max-width: 750px){
+    #iconImgLogoCgad{
+        max-height: 120px;
+    }
+}
+@media (max-width: 620px){
+    #iconImgLogoCgad{
+        max-height: 100px;
     }
 }
 @media (max-width: 600px){
@@ -83,6 +101,11 @@
         height: 130px;
     }
     .allSubFooter{
-        width: 60%;
+        width: 78%;
+    }
+}
+@media (max-width: 545px){
+    #iconImgLogoCgad{
+        max-height: 80px;
     }
 }

@@ -28,7 +28,7 @@ export default function SubFooter(data) {
     <div className='SubFooter'>
       <div className="subFooterContent">
         <div className="imageSubFooter">
-            {data ? <img src="../cgadf.png" alt="" className="imgSubFooter" /> : <img src="./cgadf.png" alt="" className="imgSubFooter" /> }
+            {data ? <img src="../cgadt.png" id='iconImgLogoCgad' alt="" className="imgSubFooter" /> : <img src="./cgadf.png" alt="" className="imgSubFooter" /> }
         </div>
         <div className="allSubFooter">
             <div className="quem">

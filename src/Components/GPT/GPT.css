@@ -17,6 +17,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
   }
   .imgCardSlideNovo{
     height: 400px;
@@ -31,7 +32,7 @@
     padding: 10px 10px;
     border: none;
     border-radius: 0px 5px 5px 0px;
-    box-shadow: 1px 1px 7px 1px var(--verdeC);
+    /* box-shadow: 0.5px 0.5px 3px 0.5px var(--verdeC); */
     background-color: var(--verde);
     color: #fff;
     font-weight: 600;
@@ -44,7 +45,7 @@
     padding: 10px 10px;
     border: none;
     border-radius: 5px 0px 0px 5px;
-    box-shadow: 1px 1px 7px 1px var(--verdeC);
+    /* box-shadow: 0.5px 0.5px 3px 0.5px var(--verdeC); */
     background-color: var(--verde);
     color: #fff;
     font-weight: 600;
