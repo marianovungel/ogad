@@ -137,6 +137,7 @@
 .intudaction{
     color: var(--verdeE);
     font-size: 1.6rem;
+    text-align: justify;
 }
 .cardObjectivos{
     width: 300px;
@@ -272,6 +273,7 @@
 .textPHistory{
     font-size: 1.1rem;
     margin: 10px 0px;
+    text-align: justify;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

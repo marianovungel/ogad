@@ -79,12 +79,27 @@ a{
     padding: 7px;
     border-radius: 10px;
 }
-@media (max-width: 1070px){
+@media (max-width: 1393px){
     .title{
         font-size: 0.8rem;
     }
 }
-@media (max-width: 960px){
+@media (max-width: 1106px){
+    .title{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 1070px){
+    .title{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 1070px){
+    .title{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 1007px){
     .logoClass{
         height: 70px;
     }
@@ -108,6 +123,11 @@ a{
         height: 50px;
         padding: 5px;
         border-radius: 5px;
+    }
+}
+@media (max-width: 914px){
+    .title{
+        font-size: 0.5rem;
     }
 }
 @media (max-width: 880px){

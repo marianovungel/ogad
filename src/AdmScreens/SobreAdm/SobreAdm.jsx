@@ -6,6 +6,7 @@ import MenuAdm from '../MenuAdm/MenuAdm';
 
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
+import Auth from '../Auth/Auth';
 
 //upload img
 async function postImage({image, description}) {
@@ -370,6 +371,7 @@ export default function SobreAdm() {
     {UserAdm && (
     <>
         <MenuAdm select={"inicio"} />
+        <Auth />
         <div className="nossaSobreFull dfTexxt">
             <div className="oitentaNossa">
                 <div className="TitleNossa">Nossa história</div>

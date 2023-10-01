@@ -5,6 +5,7 @@ import api from '../api'
 import Swal from 'sweetalert2'
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
+import Auth from '../Auth/Auth';
 
 export default function ContatoAdm() {
 
@@ -77,6 +78,7 @@ export default function ContatoAdm() {
     {UserAdm && (
     <div>
         <MenuAdm />
+        <Auth />
       <div className="contactosContentPage">
         <div className="fullRed">
             <div className="telContent">

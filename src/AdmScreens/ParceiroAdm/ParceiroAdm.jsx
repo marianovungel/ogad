@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import api from '../api';
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
+import Auth from '../Auth/Auth';
 
 //upload img
 async function postImage({image, description}) {
@@ -179,6 +180,7 @@ export default function ParceiroAdm() {
     {UserAdm && (
     <div>
         <MenuAdm />
+        <Auth />
         {/* ================================================ */}
         <div className="newFullContentForm">
             <div className="oitentaofFull">

@@ -7,6 +7,7 @@ import api from '../api'
 import Swal from 'sweetalert2'
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
+import Auth from '../Auth/Auth'
 
 //upload img
 async function postImage({image, description}) {
@@ -183,6 +184,7 @@ export default function ProjetoAdm() {
     {UserAdm && (
     <div>
         <MenuAdm select={"project"} />
+        <Auth />
         <div className="newFullContentForm">
             <div className="oitentaofFull">
                 <div className="CadastrarNovoTema">Cadastrar Novo Tema</div>

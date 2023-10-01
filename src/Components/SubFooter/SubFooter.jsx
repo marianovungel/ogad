@@ -34,7 +34,7 @@ export default function SubFooter(data) {
             <div className="quem">
                 <div className="quemTitle">Quem Somos Nós</div>
                 <div className="quemItemContem">
-                    <p className="itemQuem" onClick={Historia}>História do OGAD</p>
+                    <p className="itemQuem" onClick={Historia}>História do CGAD</p>
                     <p className="itemQuem" onClick={Home}>Missão</p>
                     <p className="itemQuem" onClick={Home}>Visão</p>
                     <p className="itemQuem" onClick={Home}>Valores</p>

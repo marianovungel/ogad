@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import MenuAdm from '../MenuAdm/MenuAdm';
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
+import Auth from '../Auth/Auth';
 
 //upload img
 async function postImage({image, description}) {
@@ -174,6 +175,7 @@ const Xvalor = ()=>{
     {UserAdm && (
      <div>
         <MenuAdm select={"inicio"} />
+        <Auth />
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction dfConteHeader">
           <h1 className="intudaction">

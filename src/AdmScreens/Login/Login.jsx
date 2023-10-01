@@ -32,7 +32,6 @@ export default function Login() {
             if(data.token){
                 const codigo = aleCod(100000, 1000000)
                 setRendou(codigo)
-                console.log(codigo)
                 var myInput = document.querySelector("#message")
                 myInput.value = `Este é o seu código de verificação: , ${codigo}`
 
