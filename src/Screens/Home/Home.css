@@ -4,6 +4,14 @@
     width: 100%;
     height: 100vh;
 }
+.showwNew{
+    width: 100%;
+    display: none;
+}
+.showwNeww{
+    width: 100%;
+    display: flex;
+}
 .imagemContent{
     width: 100%;
     height: 400px;

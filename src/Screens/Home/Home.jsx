@@ -17,6 +17,8 @@ export default function Home() {
     const [show, setShow] = useState(" ")
     const [header, setHeader] = useState(" ")
     const [text, setText] = useState(" ")
+    const [newStyle, setNewStyle] = useState("showwNew")
+    
 
   
   useEffect(()=>{
@@ -27,6 +29,12 @@ export default function Home() {
           
           const {data} = await api.get("/home")
           const response = await api.get("/sobre")
+          setNewStyle("showwNeww")
+
+          // if(getImgs.data){
+          //   setTimeout(()=>{
+          //   }, 3000)
+          // }
 
           setText(response.data[2].history)
           setHeader(data[0].header)
@@ -75,7 +83,9 @@ export default function Home() {
       <Humburguer />
       <Menu select={"inicio"} />
       {/* <Slide /> */}
-      <SlideShow slides={slides}  />
+      <div className={`${newStyle}`}>
+        <SlideShow slides={slides}  />
+      </div>
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">
