@@ -1,5 +1,19 @@
 /* SlideShow.css */
 
+.contDivPencepaly{
+  position: relative;
+}
+#contentImg{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.imgCardSlideNovoy{
+  width: 100%;
+}
+
 .slide-show {
     text-align: center;
     position: relative;
@@ -28,7 +42,7 @@
     display: block;
     position: absolute;
     right: 20px;
-    top: 200px;
+    top: 45%;
     padding: 10px 10px;
     border: none;
     border-radius: 0px 5px 5px 0px;
@@ -42,7 +56,7 @@
     display: block;
     position: absolute;
     left: 20px;
-    top: 200px;
+    top: 45%;
     padding: 10px 10px;
     border: none;
     border-radius: 5px 0px 0px 5px;
