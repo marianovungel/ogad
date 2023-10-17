@@ -11,7 +11,28 @@ import api from '../../AdmScreens/api'
 import SlideShow from '../../Components/GPT/GPT'
 
 
-var slides = []
+var slides = [
+  {
+    _id:"1",
+  img:"https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png",
+  title:"CGAD"
+},
+  {
+    _id:"2",
+  img:"https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png",
+  title:"CGAD"
+},
+  {
+    _id:"3",
+  img:"https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png",
+  title:"CGAD"
+},
+  {
+    _id:"4",
+  img:"https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png",
+  title:"CGAD"
+}
+];
 export default function Home() {
     const [pro, setPro] = useState()
     const [show, setShow] = useState(" ")
@@ -26,7 +47,7 @@ export default function Home() {
       try {
           const getImgs = await api.get("/atual")
           slides=getImgs.data
-          
+          console.log(getImgs.data)
           const {data} = await api.get("/home")
           const response = await api.get("/sobre")
           setNewStyle("showwNeww")
@@ -83,9 +104,9 @@ export default function Home() {
       <Humburguer />
       <Menu select={"inicio"} />
       {/* <Slide /> */}
-      <div className={`${newStyle}`}>
-        <SlideShow slides={slides}  />
-      </div>
+        <div className={`${newStyle}`}>
+          <SlideShow slides={slides}  />
+        </div>
       <div className="fulltextIntrudation">
         <div className="textContentIntrodaction">
           <h1 className="intudaction">

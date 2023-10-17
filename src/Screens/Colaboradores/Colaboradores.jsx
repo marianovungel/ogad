@@ -10,20 +10,30 @@ import api from '../../AdmScreens/api'
 
 export default function Colaboradores() {
     const [db, setDb] = useState([])
+    const [banner, setBanner] = useState({})
     
-    const getData = async()=>{
-        try {
-            var {data} = await api.get("/parceiros")
-            var res = data
-            for(var x = 0; x < data.length; x++){
-                data[x] = {...res[x], ordem:x}
-            }
-            setDb(data)
-        } catch (error) {}
-    }
-
+    
     
     useEffect(()=>{
+        const getData = async()=>{
+            try {
+                const ress = await api.get("/bannertema")
+                setBanner(ress.data[0])
+                
+                var myInput = document.querySelector(".fullContentFast")
+                myInput.style.backgroundImage = "url('" + ress.data[0].img + "')";
+                myInput.style.backgroundRepeat = "no-repeat";
+                myInput.style.backgroundSize = "cover";
+                myInput.style.backgroundPosition = "center";
+
+                var {data} = await api.get("/parceiros")
+                var res = data
+                for(var x = 0; x < data.length; x++){
+                    data[x] = {...res[x], ordem:x}
+                }
+                setDb(data)
+            } catch (error) {}
+        }
         getData()
     }, [])
 
@@ -35,9 +45,9 @@ export default function Colaboradores() {
         <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent" id='newSizeTitle'>Nossos Parceiros</h1>
+                    <h1 className="centerFastContent" id='newSizeTitle'>{banner.title}</h1>
                     <p className="paragradoFastContent" id='newSizeP'>
-                        A vossa Parecer é importante para melhorar os nossos Serviços
+                    {banner.desc}
                     </p>
                 </div>
             </div>

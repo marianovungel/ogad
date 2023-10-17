@@ -10,16 +10,28 @@ import api from '../../AdmScreens/api'
     
 export default function Projeto() {
     const [pro, setPro] = useState()
+    const [banner, setBanner] = useState({})
     const [show, setShow] = useState(" ")
 
-    const gatAll= async()=>{
-        try {
-            const response = await api.get("/tema")
-            setPro(response.data)
-        } catch (error) {}
-    }
+    
 
     useEffect(()=>{
+        const gatAll= async()=>{
+            try {
+                const res = await api.get("/bannertema")
+                setBanner(res.data[0])
+                
+                var myInput = document.querySelector(".fullContentFast")
+                myInput.style.backgroundImage = "url('" + res.data[0].img + "')";
+                myInput.style.backgroundRepeat = "no-repeat";
+                myInput.style.backgroundSize = "cover";
+                myInput.style.backgroundPosition = "center";
+                
+
+                const response = await api.get("/tema")
+                setPro(response.data)
+            } catch (error) {}
+        }
         gatAll()
     }, [])
 
@@ -38,13 +50,14 @@ export default function Projeto() {
         <div className="fullContentFast">
             <div className="colorFastContent">
                 <div className="oitentaFastContent">
-                    <h1 className="centerFastContent">OS TEMAS QUE SERÃO ESTUDADOS PELO CGAD</h1>
+                    <h1 className="centerFastContent">{banner.title}</h1>
                     <p className="paragradoFastContent">
                         
                     </p>
                 </div>
             </div>
         </div>
+        
         <div className="fullProjectsSecund">
             <div className="oitentaProjectsSecund">
                 {pro?.map((d)=>(

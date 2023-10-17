@@ -32,32 +32,71 @@ export default function ProjetoAdm() {
     const [TitleE, setTitleE] = useState("")
     const [objE, setObjE] = useState("")
     const [IdEdit, setIdEdit] = useState(null)
+    const [bannert, setBannert] = useState(null)
+    const [banneri, setBanneri] = useState(null)
+    const [bannerd, setBannerd] = useState(null)
+    // const [id, setId] = useState(null)
+
+    
+
 
     const [UserAdm, setUserAdm] = useState(null)
     const {user} = useContext(Context)
 
-    const gatAll= async()=>{
+    const editBanner = async ()=>{
         try {
-            const response = await api.get("/tema")
-            setPro(response.data)
+            var result = null
+            const {data} = await api.get("/bannertema")
+            if(banneri){
+                const description = Date.now() + banneri.name;
+                result = await postImage({image: banneri, description})
+            }
+
+            if(result){
+                await api.put(`/bannertema/${data[0]._id}`,{
+                    title:bannert ? bannert : data[0].title,
+                    img:result ? result : data[0].img,
+                    desc:bannerd ? bannerd : data[0].desc
+                })
+            }
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alteração feita com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            window.location.reload()
+
         } catch (error) {}
     }
 
-    const getUserAdm = async()=>{
-        try {
-            var resUser = await api.post("/adm/getuser",{path: user.token})
-            if(resUser.data.setu === "resgatamento"){
-                setUserAdm(resUser.data.setu)
-            }else{
-                window.location.replace("/login");
-            }
-        } catch (error) {}
-    }
+    
 
     useEffect(()=>{
+
+        const gatAll= async()=>{
+            try {
+                const response = await api.get("/tema")
+                setPro(response.data)
+            } catch (error) {}
+        }
+    
+        const getUserAdm = async()=>{
+            try {
+                var resUser = await api.post("/adm/getuser",{path: user.token})
+                if(resUser.data.setu === "resgatamento"){
+                    setUserAdm(resUser.data.setu)
+                }else{
+                    window.location.replace("/login");
+                }
+            } catch (error) {}
+        }
+
         getUserAdm()
         gatAll()
-    }, )
+    }, [user.token])
 
     
 
@@ -185,6 +224,16 @@ export default function ProjetoAdm() {
     <div>
         <MenuAdm select={"project"} />
         <Auth />
+        <div className="newFullContentForm">
+            <div className="oitentaofFull">
+                <div className="CadastrarNovoTema">Editar Banner Da Página Temas</div>
+                {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
+                <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setBanneri(e.target.files[0])}  />
+                <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setBannert(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Descrição' onChange={(e)=> setBannerd(e.target.value)} />
+                <div className="divNewLateralButt"><button className="butbtnNeww" onClick={editBanner}>Editar...</button></div>
+            </div>
+        </div>
         <div className="newFullContentForm">
             <div className="oitentaofFull">
                 <div className="CadastrarNovoTema">Cadastrar Novo Tema</div>

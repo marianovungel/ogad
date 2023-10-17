@@ -37,7 +37,7 @@ class SlideShow extends Component {
     const { slides } = this.props;
     const { currentSlide } = this.state;
     // var ArrayLinks = this.props.linkId
-
+    console.log(slides)
     const getSlide = (data)=>{
       window.location.replace(`/atualidade/${slides[data]._id}`);
     }
@@ -51,6 +51,7 @@ class SlideShow extends Component {
               <img src={slides[currentSlide]?.img ? slides[currentSlide]?.img : "https://scdesign.org.br/wp-content/uploads/2021/04/fundo-branco-png-1024x576.png"} alt={`Carregando...`} className='imgCardSlideNovoy' />
               {/* <img src={slides[currentSlide]} alt={`Slide ${currentSlide + 1}`} className='imgCardSlideNovo' /> */}
             </div>
+            <div className="textBannerCenter">{slides[currentSlide]?.title}</div>
             <button className="butGoSlide" onClick={this.nextSlide}>Próximo</button>
             <button className="butGoSlideb" onClick={()=>this.nextSlideb(currentSlide)}>Anterior</button>
           </div>

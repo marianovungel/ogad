@@ -29,40 +29,73 @@ export default function ParceiroAdm() {
     const [objE, setObjE] = useState("")
     const [IdEdit, setIdEdit] = useState(null)
     const [Edit, setEdit] = useState(null)
+    const [bannert, setBannert] = useState(null)
+    const [banneri, setBanneri] = useState(null)
+    const [bannerd, setBannerd] = useState(null)
 
     const [UserAdm, setUserAdm] = useState(null)
     const {user} = useContext(Context)
 
-
-
-    const getData = async()=>{
+    const editBanner = async ()=>{
         try {
-            var {data} = await api.get("/parceiros")
-            var res = data
-            for(var x = 0; x < data.length; x++){
-                data[x] = {...res[x], ordem:x}
+            var result = null
+            const {data} = await api.get("/bannertema")
+            if(banneri){
+                const description = Date.now() + banneri.name;
+                result = await postImage({image: banneri, description})
             }
-            setDb(data)
+
+            if(result){
+                await api.put(`/bannertema/${data[0]._id}`,{
+                    title:bannert ? bannert : data[0].title,
+                    img:result ? result : data[0].img,
+                    desc:bannerd ? bannerd : data[0].desc
+                })
+            }
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alteração feita com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            window.location.reload()
+
         } catch (error) {}
     }
 
 
-    const getUserAdm = async()=>{
-        try {
-            var resUser = await api.post("/adm/getuser",{path: user.token})
-            if(resUser.data.setu === "resgatamento"){
-                setUserAdm(resUser.data.setu)
-            }else{
-                window.location.replace("/login");
-            }
-        } catch (error) {}
-    }
 
     
+    
     useEffect(()=>{
+        const getData = async()=>{
+            try {
+                var {data} = await api.get("/parceiros")
+                var res = data
+                for(var x = 0; x < data.length; x++){
+                    data[x] = {...res[x], ordem:x}
+                }
+                setDb(data)
+            } catch (error) {}
+        }
+    
+    
+        const getUserAdm = async()=>{
+            try {
+                var resUser = await api.post("/adm/getuser",{path: user.token})
+                if(resUser.data.setu === "resgatamento"){
+                    setUserAdm(resUser.data.setu)
+                }else{
+                    window.location.replace("/login");
+                }
+            } catch (error) {}
+        }
+    
         getUserAdm()
         getData()
-    }, )
+    }, [user.token])
 
     const Cadastrar = async()=>{
         try {
@@ -182,6 +215,16 @@ export default function ParceiroAdm() {
         <MenuAdm />
         <Auth />
         {/* ================================================ */}
+        <div className="newFullContentForm">
+            <div className="oitentaofFull">
+                <div className="CadastrarNovoTema">Editar Banner Da Página Parcerias</div>
+                {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
+                <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setBanneri(e.target.files[0])}  />
+                <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setBannert(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Descrição' onChange={(e)=> setBannerd(e.target.value)} />
+                <div className="divNewLateralButt"><button className="butbtnNeww" onClick={editBanner}>Editar...</button></div>
+            </div>
+        </div>
         <div className="newFullContentForm">
             <div className="oitentaofFull">
                 <div className="CadastrarNovoTema">Cadastrar Parceria</div>
