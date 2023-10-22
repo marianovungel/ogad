@@ -207,6 +207,11 @@
         text-align: center;
     }
 }
+@media (max-width: 700px){
+    .centerFastContent{
+        text-align: center;
+    }
+}
 @media (max-width: 560px){
     .cardProjectsSecund{
         width: 200px;

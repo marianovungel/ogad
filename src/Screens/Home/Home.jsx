@@ -47,7 +47,7 @@ export default function Home() {
       try {
           const getImgs = await api.get("/atual")
           slides=getImgs.data
-          console.log(getImgs.data)
+          // console.log(getImgs.data)
           const {data} = await api.get("/home")
           const response = await api.get("/sobre")
           setNewStyle("showwNeww")
@@ -144,14 +144,6 @@ export default function Home() {
         <div className="backImgContentBissau">
           <div className="colorBackBissau">
             <div className="textBackBissau">
-              <div className="leftBissau">
-                <div className="textBissauLeft">
-                  Com atuação em todo o páis, agora se expandindo
-                  em toda diáspora Guineense
-                </div>
-                <Link to='/sobre'><button className="leftButtonBissau">Conheça a gente <i className="fa-solid fa-circle-check cicleColor"></i></button></Link>
-              </div>
-              <div className="centerBissau"></div>
               <div className="rightBissau">
                 <p className="ogadText">CGAD</p>
                 <p className="textDescOGAD">CENTRO DE PESQUISA GUINEENSE</p>
@@ -161,6 +153,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="fullHistory">
         <div className="contentHistory">
           <div className="imageHistory">

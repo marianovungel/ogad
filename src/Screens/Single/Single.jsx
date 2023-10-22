@@ -57,7 +57,7 @@ export default function Single() {
       <div className="headerSingle">
         <div className="oitentSingleHeaderTextSocial">
             <div className="tempoSingle">
-                <div className="porSocial">Por <i className='iName'>Ivanilson Mateus</i></div>
+                <div className="porSocial">Por <i className='iName'></i>CGAD</div>
                 <div className="dataSocial">
                   <i className="fa-regular fa-clock clockSize"></i> {new  Date(res.createdAt).toDateString()} 
                   {res?.updatedAt && (

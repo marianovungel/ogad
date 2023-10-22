@@ -71,6 +71,9 @@
     /* background-image: linear-gradient(to right,var(--verde), transparent); */
     /* opacity: 0.0; */
 }
+.textDescOGAD{
+    margin-left: 10px;
+}
 .ogadText, .textDescOGAD{
     color: #fff;
     margin: 0px;
@@ -79,7 +82,7 @@
     font-size: 8.7rem;
 }
 .textDescOGAD{
-    font-size: 2.2rem;
+    font-size: 1.2rem;
 }
 .textBack{
     display: flex;
@@ -112,11 +115,9 @@
 .rightBissau{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* background-color: var(--verde); */
-    width: 50%;
-    border-radius: 50px;
-    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .fulltextIntrudation{
     width: 100%;
@@ -315,7 +316,7 @@
         font-size: 8rem;
     }
     .textDescOGAD{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     .textBissauLeft{
         font-size: 0.8rem;

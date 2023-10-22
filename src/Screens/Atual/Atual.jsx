@@ -5,42 +5,70 @@ import Menu from '../../Components/Menu/Menu'
 import SubFooter from '../../Components/SubFooter/SubFooter'
 import Footer from '../../Components/Footer/Footer'
 import Humburguer from '../../Components/Humburguer/Humburguer'
+import Carrocel from '../../Components/Carrocel/Carrocel'
 import api from '../../AdmScreens/api'
 
 
+var slides = []
 export default function Atual() {
     const [post, setPost] = useState()
     const [show, setShow] = useState("")
     const [contact, setContact] = useState({})
     
-    const getData = async ()=>{
-        try {
-            const res = await api.get("/atual")
-            setPost(res.data)
-            // console.log(res.data)
-            const ress = await api.get("/contato")
-            setContact(ress.data[0])
-            // console.log(ress.data[1])
-        } catch (error) {}
-    }
+    
 
     const getSlide = (data)=>{
         window.location.replace(`/atualidade/${data}`);
       }
-
     
     useEffect(()=>{
+
+        const getDataCarrocel = async()=>{
+            try {
+                const {data} = await api.get("/home")
+                // setNewStyle("showwNeww")
+                slides = [
+                    {
+                        id:"1",
+                        img:data[0].imissao,
+                        title:"MISSÃO",
+                        obj:data[0].missao
+                    },
+                    {
+                        id:"2",
+                        img:data[0].ivisao,
+                        title:"VISÃO",
+                        obj:data[0].visao
+                    },
+                    {
+                        id:"3",
+                        img:data[0].ivalor,
+                        title:"VALORES",
+                        obj:data[0].valor
+                    }
+                ]
+      
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        const getData = async ()=>{
+            try {
+                const res = await api.get("/atual")
+                setPost(res.data)
+                // console.log(res.data)
+                const ress = await api.get("/contato")
+                setContact(ress.data[0])
+                // console.log(ress.data[1])
+            } catch (error) {}
+        }
+
+        getDataCarrocel()
         getData()
         setShow("")
     }, [])
 
-    // const verify = (id)=>{
-    //     if(show === id){
-    //         setShow(" ")
-    //     }else{
-    //         setShow(id)
-    //     }
-    // }
 
   return (
     <div className='Atual'>
@@ -60,7 +88,7 @@ export default function Atual() {
                             <div className="titleAtual">
                                 {d.title}
                             </div>
-                            <div className="regiaoAtual">Notícias / Redenção-CE</div>
+                            <div className="regiaoAtual">Notícias / </div>
                             {show === d._id ? (
                                 <div id="descAtual" className={d._id}>
                                     <p className='allTextVizible'>
@@ -102,15 +130,7 @@ export default function Atual() {
                             </div>
                         </div>
                         <div className="conTentCarAssFour">
-                            <div className="contentAssociacaoCard marginTopAssociacaao">
-                                <div className="logoAssociacao"><img src="././cgadt.png" alt="" className="logoimgAssociacao" /></div>
-                                <div className="TitleAssociacao">Slogan da CGAD</div>
-                                <div className="emailAssociacao">
-                                    <i className="locationAsso">
-                                        {contact.slogan}
-                                    </i>
-                                </div>
-                            </div>
+                            <Carrocel slides={slides} />
                         </div>
                     </div>
                 </div>

@@ -37,7 +37,7 @@ class SlideShow extends Component {
     const { slides } = this.props;
     const { currentSlide } = this.state;
     // var ArrayLinks = this.props.linkId
-    console.log(slides)
+    // console.log(slides)
     const getSlide = (data)=>{
       window.location.replace(`/atualidade/${slides[data]._id}`);
     }
