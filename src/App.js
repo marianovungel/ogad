@@ -17,6 +17,7 @@ import { useContext } from 'react';
 import {Context} from './Context/Context'
 import Single from './Screens/Single/Single';
 import AuthSenha from './AdmScreens/AuthSenha/AuthSenha';
+import EditLogo from './AdmScreens/EditLogo/EditLogo';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/parceriasadm" element={ user ? <ParceiroAdm /> : <Login /> } exact />
             <Route path="/login" element={<Login /> } exact />
             <Route path="/authsenha" element={<AuthSenha /> } exact />
+            <Route path="/alterar-logo-adm" element={<EditLogo /> } exact />
           </Routes>
         </Router>
     </div>

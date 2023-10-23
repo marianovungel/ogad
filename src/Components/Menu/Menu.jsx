@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import './Menu.css'
 import { Link } from 'react-router-dom'
+import api from '../../AdmScreens/api'
 
 export default function Menu({select, data}) {
   const [selectItem, setSelectItem] = useState(select)
+  const [Datat, setDatat] = useState({})
+
   useEffect(()=>{
+    const getData= async()=>{
+      try {
+        const resp = await api.get("/logo")
+        setDatat(resp.data[0])
+      } catch (error) {}
+    }
+    getData()
     setSelectItem(selectItem)
   }, [selectItem])
+
   return (
     <div className='Menu'>
       <div className="fullMenu">
         <div className="logoImg">
-        {data ? <img src="../cgadt.png" className='logoClass' alt="cgad" /> : <img src="./cgadt.png" className='logoClass' alt="cgad" />}
+        {data ? 
+            <img src={Datat.img} className='logoClass' alt="cgad" /> : <img src={Datat.img} className='logoClass' alt="" />
+            }
             <div className="textTitle">
-                <p className="title">CENTRO DE PESQUISA GUINEENSE</p>
-                <p className="title">EM ÁLCOOL E OUTRAS DROGAS</p>
+                <p className="title">{Datat.text1}</p>
+                <p className="title">{Datat.text2}</p>
             </div>
         </div>
         <div className="menuEscolha">
