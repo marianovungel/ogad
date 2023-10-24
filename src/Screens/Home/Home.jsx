@@ -39,7 +39,8 @@ export default function Home() {
     const [header, setHeader] = useState(" ")
     const [text, setText] = useState(" ")
     const [newStyle, setNewStyle] = useState("showwNew")
-    
+    const [resp, setResp] = useState({})
+    const [banner, setBanner] = useState({})
 
   
   useEffect(()=>{
@@ -49,11 +50,13 @@ export default function Home() {
           slides=getImgs.data
           // console.log(getImgs.data)
           const {data} = await api.get("/home")
+          const respodta = await api.get("/img")
+          setResp(respodta.data[0])
           const response = await api.get("/sobre")
           setNewStyle("showwNeww")
-
+          
           // if(getImgs.data){
-          //   setTimeout(()=>{
+            //   setTimeout(()=>{
           //   }, 3000)
           // }
 
@@ -61,25 +64,34 @@ export default function Home() {
           setHeader(data[0].header)
           const BigRes = [
               {
-                  id:"1",
+                id:"1",
                   img:data[0].imissao,
                   title:"MISSÃO",
                   obj:data[0].missao
-              },
-              {
+                },
+                {
                   id:"2",
                   img:data[0].ivisao,
                   title:"VISÃO",
                   obj:data[0].visao
               },
               {
-                  id:"3",
+                id:"3",
                   img:data[0].ivalor,
                   title:"VALORES",
                   obj:data[0].valor
-              }
+                }
           ]
           setPro(BigRes)
+
+          const newRes = await api.get("/fundo")
+          setBanner(newRes.data[0])
+
+          var myInput = document.querySelector(".fullContentFast")
+          myInput.style.backgroundImage = "url('" + newRes.data[0].img + "')";
+          myInput.style.backgroundRepeat = "no-repeat";
+          myInput.style.backgroundSize = "cover";
+          myInput.style.backgroundPosition = "center";
 
       } catch (error) {
           console.log(error)
@@ -139,26 +151,25 @@ export default function Home() {
                 ))}
             </div>
         </div>
-      
-      <div className="imagemContent">
-        <div className="backImgContentBissau">
-          <div className="colorBackBissau">
-            <div className="textBackBissau">
-              <div className="rightBissau">
-                <p className="ogadText">CGAD</p>
-                <p className="textDescOGAD">CENTRO DE PESQUISA GUINEENSE</p>
-                <p className="textDescOGAD">EM ÁLCOOL E OUTRAS DROGAS</p>
+
+
+        <div className="fullContentFast">
+              <div className="colorBackBissau">
+                <div className="textBackBissau">
+                  <div className="rightBissau">
+                    <p className="ogadText">{banner.title}</p>
+                    <p className="textDescOGAD">{banner.text1}</p>
+                    <p className="textDescOGAD">{banner.text2}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
         </div>
-      </div>
 
       <div className="fullHistory">
         <div className="contentHistory">
-          <div className="imageHistory">
-            <img src="./monu.jpeg" alt="" className="imgHistory" />
-          </div>
+        <div className="use imgUser baaaa">
+          {resp.img &&(<img src={resp.img} alt="" className="imgProjectSecund" />)}
+        </div>
           <div className="textHistor">
             <div className="titleHistory">História do CGAD</div>
             <p className="textPHistory">

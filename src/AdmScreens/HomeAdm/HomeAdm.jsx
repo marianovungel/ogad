@@ -31,6 +31,13 @@ export default function HomeAdm() {
     const [iMissao, setIMissao]= useState(null)
     const [iVisao, setIVisao]= useState(null)
     const [iValor, setIValor]= useState(null)
+    const [File, setFile]= useState(null)
+    const [resp, setResp] = useState({})
+    const [Banner, setBanner] = useState(false)
+    const [bannert, setBannert] = useState(null)
+    const [banneri, setBanneri] = useState(null)
+    const [bannerd, setBannerd] = useState(null)
+    const [bannerd2, setBannerd2] = useState(null)
 
     const {user} = useContext(Context);
 
@@ -50,6 +57,38 @@ export default function HomeAdm() {
               Swal.fire('Alteração não salva', '', 'info')
             }
           })
+    }
+
+    const editBanner = async ()=>{
+        try {
+            var result = null
+            const {data} = await api.get("/fundo")
+            if(banneri){
+                const description = Date.now() + banneri.name;
+                result = await postImage({image: banneri, description})
+            }
+
+            if(result){
+                await api.put(`/fundo/${data[0]._id}`,{
+                    title:bannert ? bannert : data[0].title,
+                    img:result ? result : data[0].img,
+                    text1:bannerd ? bannerd : data[0].text1,
+                    text2:bannerd2 ? bannerd2 : data[0].text2,
+                })
+            }
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alteração feita com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            window.location.reload()
+
+        } catch (error) {
+            setBanner(true)
+        }
     }
 
 
@@ -99,6 +138,8 @@ export default function HomeAdm() {
     const getData = async()=>{
         try {
             const {data} = await api.get("/home")
+            const respodta = await api.get("/img")
+            setResp(respodta.data[0])
             setHeader(data[0].header)
 
             const BigRes = [
@@ -169,6 +210,36 @@ const Xvisao = ()=>{
 const Xvalor = ()=>{
     setValor(pro[2].obj)
     setEdit(false)
+}
+
+
+const SalvarImagem = async()=>{
+    try {
+        var resultado = null
+        if(File){
+            const description = Date.now() + File.name;
+            resultado = await postImage({image: File, description})
+        }
+        if(resultado){
+            await api.put(`/img/${resp._id}`,{
+                img:resultado
+            })
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alteração feita com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+
+              window.location.reload()
+        }else{
+            alert("É obrigatório adicionar  uma imagem para poder Fazer a alteração!")
+        }
+    } catch (error) {
+        
+    }
 }
   return (
     <>
@@ -285,6 +356,52 @@ const Xvalor = ()=>{
                 ))}
             </div>
         </div>
+        {/* ************************************************ */}
+        <div className="newFullContentForm">
+            <div className="oitentaofFull">
+                <div className="CadastrarNovoTema">Editar Banner Da Página Início</div>
+                {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
+                <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setBanneri(e.target.files[0])}  />
+                <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setBannert(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Texto 1' onChange={(e)=> setBannerd(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Texto 2' onChange={(e)=> setBannerd2(e.target.value)} />
+                <div className="divNewLateralButt"><button className="butbtnNeww" onClick={editBanner}>Editar...</button></div>
+            </div>
+        </div>
+        {/* ************************************************ */}
+        <div className="fullHistory">
+        <div className="contentHistory">
+          <div className="imageHistory">
+            {/* <img src="./monu.jpeg" alt="" className="imgHistory" /> */}
+            
+
+            {/* ============================================== */}
+            <div className="use imgUser baaaa">
+                {File ? (
+                    <img src={URL.createObjectURL(File)} alt="" className="imgProjectSecund" />
+                ):(
+                    <img src={resp.img} alt="" className="imgProjectSecund" />
+                )}
+                <div className="displayNoneImguu">
+                    <input type="file" id='imgUserPhotovay' accept="image/*" className="inputImgUser userInputB Bselect displayNone" onChange={(e)=> setFile(e.target.files[0])}  />
+                </div>
+                <label htmlFor='imgUserPhotovay' className="newPositionIcon">
+                    <i className="fa-regular fa-image newPositionIconyu"></i>
+                </label>
+                <div className="contenteButtonSubmit">
+                    <button className="sendOrSubmit" onClick={SalvarImagem}>Salvar...</button>
+                </div>
+            </div>
+            {/* ============================================== */}
+          </div>
+          <div className="textHistor">
+            <div className="titleHistory">História do CGAD</div>
+            <p className="textPHistory">
+            </p>
+              <button className="buttonHistory">Sobre CGAD <i className="fa-solid fa-circle-chevron-right cicleColor"></i></button>
+          </div>
+        </div>
+      </div>
         <div className="redeDiv" onClick={confirm}>SALVAR ALTERAÇÕES....</div>
     </div>
     )}
