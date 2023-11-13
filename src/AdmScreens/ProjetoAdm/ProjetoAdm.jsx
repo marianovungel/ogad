@@ -35,6 +35,10 @@ export default function ProjetoAdm() {
     const [bannert, setBannert] = useState(null)
     const [banneri, setBanneri] = useState(null)
     const [bannerd, setBannerd] = useState(null)
+    const [Fundot, setFundot] = useState(null)
+    const [Fundoi, setFundoi] = useState(null)
+    const [Fundod, setFundod] = useState(null)
+    const [Fundod2, setFundod2] = useState(null)
     // const [id, setId] = useState(null)
 
     
@@ -218,6 +222,37 @@ export default function ProjetoAdm() {
         } catch (error) {}
     }
 
+    const editFundo = async ()=>{
+        try {
+            var result = null
+            const {data} = await api.get("/fundotema")
+            if(Fundoi){
+                const description = Date.now() + Fundoi.name;
+                result = await postImage({image: Fundoi, description})
+            }
+
+            if(result){
+                await api.put(`/fundotema/${data[0]._id}`,{
+                    title:Fundot ? Fundot : data[0].title,
+                    img:result ? result : data[0].img,
+                    text1:Fundod ? Fundod : data[0].text1,
+                    text2:Fundod2 ? Fundod2 : data[0].text2,
+                })
+            }
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alteração feita com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+
+        } catch (error) {
+            setBanner(true)
+        }
+    }
+
   return (
     <>
     {UserAdm && (
@@ -284,6 +319,20 @@ export default function ProjetoAdm() {
                 ))}
             </div>
         </div>
+
+        {/* ************************************************ */}
+        <div className="newFullContentForm">
+            <div className="oitentaofFull">
+                <div className="CadastrarNovoTema">Editar Banner Da Página Tema</div>
+                {Banner && (<div className="CadastrarNovoTemaRed">Preencha todos os campos...</div>)}
+                <input type="file" id='imgUserPhoto' accept="image/*" className="textFastIn" onChange={(e)=> setFundoi(e.target.files[0])}  />
+                <input type="text" className="textFastIn" placeholder='Título' onChange={(e)=> setFundot(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Texto 1' onChange={(e)=> setFundod(e.target.value)} />
+                <input type="text" className="textFastIn" placeholder='Texto 2' onChange={(e)=> setFundod2(e.target.value)} />
+                <div className="divNewLateralButt"><button className="butbtnNeww" onClick={editFundo}>Editar...</button></div>
+            </div>
+        </div>
+        {/* ************************************************ */}
     </div>
     )}
     </>

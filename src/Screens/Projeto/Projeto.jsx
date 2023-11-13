@@ -12,6 +12,8 @@ export default function Projeto() {
     const [pro, setPro] = useState()
     const [banner, setBanner] = useState({})
     const [show, setShow] = useState(" ")
+    const [Fundo, setFundo] = useState({})
+
 
     
 
@@ -30,6 +32,14 @@ export default function Projeto() {
 
                 const response = await api.get("/tema")
                 setPro(response.data)
+
+                const newRes = await api.get("/fundotema")
+                setFundo(newRes.data[0])
+                var myinputt = document.querySelector("#fullContentFastr")
+                myinputt.style.backgroundImage = "url('" + newRes.data[0].img + "')";
+                myinputt.style.backgroundRepeat = "no-repeat";
+                myinputt.style.backgroundSize = "cover";
+                myinputt.style.backgroundPosition = "center";
             } catch (error) {}
         }
         gatAll()
@@ -83,38 +93,20 @@ export default function Projeto() {
                 ))}
             </div>
         </div>
-        <div className="imagemContent">
-            <div className="backImgContentBissau">
-                <div className="colorBackBissau">
-                    <div className="textBackTrie">
-                        <div className="elementCardTrie">
-                            {/* <i className="fa-brands fa-pagelines sizeTrie"></i>
-                            <i className='numberTrie'>004</i>
-                            <div className="risco"></div>
-                            <div className="descTrie">PROJETOS ELABORADOS</div> */}
-                        </div>
-                        <div className="elementCardTrie">
-                            {/* <i className="fa-solid fa-chart-line sizeTrie"></i>
-                            <i className='numberTrie'>003</i>
-                            <div className="risco"></div>
-                            <div className="descTrie">PROJETOS EXECUTADOS</div> */}
-                        </div>
-                        <div className="elementCardTrie">
-                            {/* <i className="fa-solid fa-map-location-dot sizeTrie"></i>
-                            <i className='numberTrie'>002</i>
-                            <div className="risco"></div>
-                            <div className="descTrie">REGIÕES BENEFICIADAS</div> */}
-                        </div>
-                        <div className="elementCardTrie">
-                            {/* <i className="fa-solid fa-person-harassing sizeTrie"></i>
-                            <i className='numberTrie'>150</i>
-                            <div className="risco"></div>
-                            <div className="descTrie">POPULAÇÃO ALCANÇADA</div> */}
-                        </div>
-                    </div>
+        {/*  */}
+
+        <div id='fullContentFastr' className="fullContentFast">
+              <div className="colorBackBissau">
+                <div className="textBackBissau">
+                  <div className="rightBissau">
+                    <p className="ogadText">{Fundo.title}</p>
+                    <p className="textDescOGAD">{Fundo.text1}</p>
+                    <p className="textDescOGAD">{Fundo.text2}</p>
+                  </div>
                 </div>
-            </div>
+              </div>
         </div>
+
         <SubFooter />
         <Footer />
     </div>
