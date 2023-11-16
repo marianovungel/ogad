@@ -44,3 +44,39 @@
     align-items: center;
     justify-content: center;
 }
+.regiaoAtualnew{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.Privado{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--amarelo);
+    cursor: pointer;
+}
+.Publico{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--verde);
+    cursor: pointer;
+}
+.statusIcon{
+    margin: 0px 5px;
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.iStatus{
+    margin-left: 5px;
+}

@@ -46,7 +46,7 @@ export default function Home() {
   useEffect(()=>{
     const getData = async()=>{
       try {
-          const getImgs = await api.get("/atual")
+          const getImgs = await api.get("/atual/public")
           slides=getImgs.data
           // console.log(getImgs.data)
           const {data} = await api.get("/home")

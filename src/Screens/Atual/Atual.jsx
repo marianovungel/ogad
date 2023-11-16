@@ -55,9 +55,8 @@ export default function Atual() {
 
         const getData = async ()=>{
             try {
-                const res = await api.get("/atual")
+                const res = await api.get("/atual/public")
                 setPost(res.data)
-                // console.log(res.data)
                 const ress = await api.get("/contato")
                 setContact(ress.data[0])
                 // console.log(ress.data[1])

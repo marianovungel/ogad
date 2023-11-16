@@ -36,7 +36,7 @@ export default function Login() {
                 myInput.value = `Este é o seu código de verificação: , ${codigo}`
 
                 setShow(false)
-                
+                // console.log(codigo)
                 emailjs.sendForm('service_x1gywkk', 'template_nha5mop', form.current, 'NydSs6yI1bSQuFoaC')
                 .then((result) => {
                     console.log(result.text);

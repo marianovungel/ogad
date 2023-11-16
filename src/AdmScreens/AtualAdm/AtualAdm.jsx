@@ -35,30 +35,34 @@ export default function AtualAdm() {
     const [contact, setContact] = useState({})
     const {user} = useContext(Context)
 
-    const getData = async ()=>{
-        try {
-            const res = await api.get("/atual")
-            setPost(res.data)
-            const ress = await api.get("/contato")
-            setContact(ress.data[1])
-        } catch (error) {}
-    }
-    const getUserAdm = async()=>{
-        try {
-            var resUser = await api.post("/adm/getuser",{path: user.token})
-            if(resUser.data.setu === "resgatamento"){
-                setUserAdm(resUser.data.setu)
-            }else{
-                window.location.replace("/login");
-            }
-        } catch (error) {}
-    }
+    
+    
 
     
     useEffect(()=>{
+        const getData = async ()=>{
+            try {
+                const res = await api.get("/atual")
+                setPost(res.data)
+                const ress = await api.get("/contato")
+                setContact(ress.data[1])
+            } catch (error) {}
+        }
+
+        const getUserAdm = async()=>{
+            try {
+                var resUser = await api.post("/adm/getuser",{path: user.token})
+                if(resUser.data.setu === "resgatamento"){
+                    setUserAdm(resUser.data.setu)
+                }else{
+                    window.location.replace("/login");
+                }
+            } catch (error) {}
+        }
+
         getUserAdm()
         getData()
-    }, )
+    }, [user.token])
 
     const Cadastrar = async()=>{
         try {
@@ -74,7 +78,8 @@ export default function AtualAdm() {
                     title: Title,
                     img:result,
                     local:obj,
-                    text:desc
+                    text:desc,
+                    status:false
                 })
                 Swal.fire({
                     position: 'center',
@@ -172,6 +177,52 @@ export default function AtualAdm() {
         
     }
 
+    const Public = async (id)=>{
+        console.log(id)
+        console.log("Tornar Publico")
+        await api.put(`/atual/public/${id}`)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Atualização Alterado com Sucesso!"
+          });
+
+          window.location.reload()
+    }
+    const Privado = async (id)=>{
+        console.log(id)
+        console.log("Tornar privado")
+        await api.put(`/atual/private/${id}`)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Atualização Alterado com Sucesso!"
+          });
+
+          window.location.reload()
+        
+    }
+
   return (
     <>
     {UserAdm && (
@@ -204,7 +255,18 @@ export default function AtualAdm() {
                             <div className="titleAtual">
                                 {d.title}
                             </div>
-                            <div className="regiaoAtual">Notícias / {d.local}</div>
+                            <div className="regiaoAtualnew">
+                                <div className="statusCont">
+                                    Estatus :  <i className='iStatus'>{d.status ? "Público":"Privado"}</i>
+                                    {d.status ? <i className="fa-solid fa-lock-open statusIcon"></i>:<i className="fa-solid fa-lock statusIcon"></i>}
+                                    {/* {d.status ? <i className="fa-solid fa-users statusIcon"></i>:<i className="fa-solid fa-lock statusIcon"></i>} */}
+                                </div>
+                                {d.status ? (
+                                    <div className="Privado" onClick={()=>Privado(d._id)}>Privado</div>
+                                ):(
+                                    <div className="Publico" onClick={()=>Public(d._id)}>Público</div>
+                                )}
+                            </div>
                             {show === d._id && (
                                 <div id="descAtual" className={d._id}>
                                 <p className='textVizible'>{/* {d.text} */}</p>
