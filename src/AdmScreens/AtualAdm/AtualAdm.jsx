@@ -178,8 +178,6 @@ export default function AtualAdm() {
     }
 
     const Public = async (id)=>{
-        console.log(id)
-        console.log("Tornar Publico")
         await api.put(`/atual/public/${id}`)
         const Toast = Swal.mixin({
             toast: true,
@@ -200,8 +198,6 @@ export default function AtualAdm() {
           window.location.reload()
     }
     const Privado = async (id)=>{
-        console.log(id)
-        console.log("Tornar privado")
         await api.put(`/atual/private/${id}`)
         const Toast = Swal.mixin({
             toast: true,

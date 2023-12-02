@@ -253,6 +253,48 @@ export default function ProjetoAdm() {
         }
     }
 
+    const Public = async (id)=>{
+        await api.put(`/tema/public/${id}`)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Atualização Alterado com Sucesso!"
+          });
+
+          window.location.reload()
+    }
+    const Privado = async (id)=>{
+        await api.put(`/tema/private/${id}`)
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Atualização Alterado com Sucesso!"
+          });
+
+          window.location.reload()
+        
+    }
+
   return (
     <>
     {UserAdm && (
@@ -290,6 +332,20 @@ export default function ProjetoAdm() {
                             <div className="TitleProjectsSecund">{d.title}</div>
                             <div className="descriptionProjectsSecund"></div>
                         </div>
+
+                        <div className="regiaoAtualnew">
+                            <div className="statusCont">
+                                Estatus :  <i className='iStatus'>{d.status ? "Público":"Privado"}</i>
+                                {d.status ? <i className="fa-solid fa-lock-open statusIcon"></i>:<i className="fa-solid fa-lock statusIcon"></i>}
+                                {/* {d.status ? <i className="fa-solid fa-users statusIcon"></i>:<i className="fa-solid fa-lock statusIcon"></i>} */}
+                            </div>
+                            {d.status ? (
+                                <div className="Privado" onClick={()=>Privado(d._id)}>Privado</div>
+                            ):(
+                                <div className="Publico" onClick={()=>Public(d._id)}>Público</div>
+                            )}
+                        </div>
+
                         <div className="editDeletCardIcons">
                             <i className="fa-solid fa-trash-can delred" onClick={()=>DeleteTextConfirm(d._id)}></i>
                             <i className="fa-solid fa-pen-to-square delamarelo" onClick={()=>EditTextConfirm(d)}></i>
@@ -297,6 +353,8 @@ export default function ProjetoAdm() {
                         <div className="buttonProjectsSecund">
                             <i className="fa-solid fa-circle-arrow-down arrowSizee" onClick={()=>verify(d._id)}></i>
                         </div>
+
+
                         {show === d._id && (
                             <div id="buttomCardSecund newMar" className={d.id}>
                                 <div className="ObjCard"><b> </b>{d.obj}</div>

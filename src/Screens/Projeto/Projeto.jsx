@@ -30,7 +30,7 @@ export default function Projeto() {
                 myInput.style.backgroundPosition = "center";
                 
 
-                const response = await api.get("/tema")
+                const response = await api.get("/tema/public")
                 setPro(response.data)
 
                 const newRes = await api.get("/fundotema")
