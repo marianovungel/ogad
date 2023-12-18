@@ -69,7 +69,7 @@ export default function Projeto() {
         </div>
         
         <div className="fullProjectsSecund">
-            <div className="oitentaProjectsSecund">
+            <div className="oitentaProjectsSecundNew">
                 {pro?.map((d)=>(
                     <div className="cardProjectsSecund" key={d._id}>
                         <div className="imageProjectSecurd">

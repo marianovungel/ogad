@@ -45,7 +45,14 @@
     justify-content: space-between;
     align-items:flex-start;
     flex-wrap: wrap;
-
+}
+.oitentaProjectsSecundNew{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    gap: 3%;
 }
 .imgProjectSecund{
     height: 280px;
@@ -151,6 +158,11 @@
 @media (max-width: 1340px){
     .oitentaProjectsSecund{
         width: 90%;
+    }
+}
+@media (max-width: 1277px){
+    .oitentaProjectsSecundNew{
+        width: 95%;
     }
 }
 @media (max-width: 1100px){
