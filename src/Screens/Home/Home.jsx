@@ -168,7 +168,7 @@ export default function Home() {
       <div className="fullHistory">
         <div className="contentHistory">
         <div className="use imgUser baaaa">
-          {resp.img &&(<img src={resp.img} alt="" className="imgProjectSecund" />)}
+          {resp.img &&(<img src={resp.img} alt="" className="imgProjectSecundBove" />)}
         </div>
           <div className="textHistor">
             <div className="titleHistory">História do CGAD</div>

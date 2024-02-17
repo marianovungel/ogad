@@ -44,7 +44,7 @@ export default function Sobre() {
                     <div className="textBack">
                         <p className="ogadText">CGAD</p>
                         <p className="textDescOGADSobre">Centro de Pesquisa Guineense </p>
-                        <p className="textDescOGADSobre">em álcool e outras drogas...</p>
+                        <p className="textDescOGADSobre">em Álcool e outras Drogas...</p>
                     </div>
                 </div>
                 <div className="pSvgContent">
@@ -103,7 +103,7 @@ export default function Sobre() {
                 <div className="itemMembros2">
                     
                 {colaborador?.map((m)=>(
-                        <div className="cardMembro2" key={m._id}>
+                        <div className="cardMembro2 marginTopParaOCard" key={m._id}>
                             <div className="imgCardMembro2">
                                 <img src={m.img} alt="" className="imageCardMembro2" />
                                 <div className="NameAndCardgoCArdMembro">

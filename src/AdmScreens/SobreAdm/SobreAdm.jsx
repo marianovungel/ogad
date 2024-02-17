@@ -3,20 +3,39 @@ import './SobreAdm.css'
 import api from '../api'
 import Swal from 'sweetalert2';
 import MenuAdm from '../MenuAdm/MenuAdm';
-
 import { useContext } from 'react';
 import {Context} from '../../Context/Context'
 import Auth from '../Auth/Auth';
+// import upload from '../../upload';
+import { imageDb } from '../firebase';
+import { v4 } from 'uuid';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+
+
+
+const handleClick = async (URL)=>{
+    try {
+       const imgRef = ref(imageDb, `files/${v4()}`)
+       uploadBytes(imgRef, URL)
+       const snapshot = await uploadBytes(imgRef, URL)
+       const downloadURL = await getDownloadURL(snapshot.ref);
+       return (downloadURL)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 //upload img
 async function postImage({image, description}) {
     const formData = new FormData();
     formData.append("image", image)
     formData.append("description", description)
-  
-    const result = await api.post('/upload/upload', formData, { headers: {'Content-Type': 'multipart/form-data'}})
-    return result.data.url;
-  }
+    
+    const result = await handleClick(image)
+    console.log(result)
+    //const result = await upload.post('/upload', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+  return result;
+}
 
 export default function SobreAdm() {
     const [newp, setNewp]=useState("")
@@ -200,6 +219,7 @@ export default function SobreAdm() {
             const res = await api.get("/sobre")
             const ress = await api.get("/sobre/membro")
             const resss = await api.get("/sobre/colaborador")
+            // console.log(resss)
             sethist(res.data)
             setMembro(ress.data)
             setColaborador(resss.data)
@@ -216,6 +236,7 @@ export default function SobreAdm() {
             }
         } catch (error) {}
     }
+
 
     
     useEffect(()=>{

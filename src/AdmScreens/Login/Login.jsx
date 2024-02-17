@@ -34,6 +34,7 @@ export default function Login() {
                 setRendou(codigo)
                 var myInput = document.querySelector("#message")
                 myInput.value = `Este é o seu código de verificação: , ${codigo}`
+                console.log(codigo)
 
                 setShow(false)
                 // console.log(codigo)

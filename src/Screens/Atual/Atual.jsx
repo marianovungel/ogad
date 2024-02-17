@@ -116,7 +116,7 @@ export default function Atual() {
                     <div className="associacaoFour">
                         <div className="conTentCarAss">
                             <div className="contentAssociacaoCard">
-                                <div className="TitleAssociacao">Sede Social da CGAD</div>
+                                <div className="TitleAssociacao">CGAD</div>
                                 <div className="localAssociacao">
                                 <i className="fa-solid fa-map-location-dot"></i><i className="locationAsso">{contact.endereco}</i>
                                 </div>

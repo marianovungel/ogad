@@ -4,17 +4,33 @@ import MenuAdm from '../MenuAdm/MenuAdm'
 import Auth from '../Auth/Auth';
 import api from '../api'
 import Swal from 'sweetalert2';
+import { imageDb } from '../firebase';
+import { v4 } from 'uuid';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+
+
+
+const handleClick = async (URL)=>{
+    try {
+       const imgRef = ref(imageDb, `files/${v4()}`)
+       uploadBytes(imgRef, URL)
+       const snapshot = await uploadBytes(imgRef, URL)
+       const downloadURL = await getDownloadURL(snapshot.ref);
+       return (downloadURL)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 //upload img
 async function postImage({image, description}) {
     const formData = new FormData();
     formData.append("image", image)
     formData.append("description", description)
-  
-    const result = await api.post('/upload/upload', formData, { headers: {'Content-Type': 'multipart/form-data'}})
-    console.log(result.data.url)
-    return result.data.url;
-  }
+
+    const result = await handleClick(image)
+  return result;
+}
 
 export default function EditLogo() {
     const [file, setFile] = useState(null)

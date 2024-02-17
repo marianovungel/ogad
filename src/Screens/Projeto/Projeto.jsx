@@ -22,6 +22,7 @@ export default function Projeto() {
             try {
                 const res = await api.get("/bannertema")
                 setBanner(res.data[0])
+                // console.log(res.data)
                 
                 var myInput = document.querySelector(".fullContentFast")
                 myInput.style.backgroundImage = "url('" + res.data[0].img + "')";

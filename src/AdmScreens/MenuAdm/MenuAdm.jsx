@@ -36,7 +36,7 @@ export default function MenuAdm({select}) {
 
   const verifyUpdate = ()=>{
     Swal.fire({
-      title: 'Você desejas atualizar o logo?',
+      title: 'Você desejas atualizar a logo?',
       showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Atualizar',
